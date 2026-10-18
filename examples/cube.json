@@ -1,0 +1,378 @@
+{
+  "version": 1,
+  "mode": "cube",
+  "placements": [
+    {
+      "piece": 35,
+      "orientation": "0,0,0;0,0,1;0,0,2;0,0,3;0,0,4;0,0,5",
+      "origin": [
+        5,
+        5,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 12,
+      "orientation": "0,0,0;0,0,1;0,0,2;0,0,3;0,1,0;0,1,1",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 27,
+      "orientation": "0,0,0;1,0,0;2,0,0;2,1,0;2,2,0;3,1,0",
+      "origin": [
+        0,
+        0,
+        5
+      ],
+      "locked": false
+    },
+    {
+      "piece": 33,
+      "orientation": "0,0,0;0,1,0;0,2,0;0,2,1;0,3,0;0,4,0",
+      "origin": [
+        0,
+        0,
+        4
+      ],
+      "locked": false
+    },
+    {
+      "piece": 14,
+      "orientation": "0,0,0;0,0,1;0,0,3;1,0,1;1,0,2;1,0,3",
+      "origin": [
+        0,
+        1,
+        2
+      ],
+      "locked": false
+    },
+    {
+      "piece": 30,
+      "orientation": "0,0,4;1,0,0;1,0,1;1,0,2;1,0,3;1,0,4",
+      "origin": [
+        0,
+        3,
+        1
+      ],
+      "locked": false
+    },
+    {
+      "piece": 10,
+      "orientation": "0,0,1;0,0,2;1,0,0;1,0,1;2,0,0;2,0,1",
+      "origin": [
+        1,
+        2,
+        3
+      ],
+      "locked": false
+    },
+    {
+      "piece": 26,
+      "orientation": "0,1,0;1,1,0;1,2,0;2,0,0;2,1,0;3,0,0",
+      "origin": [
+        0,
+        3,
+        5
+      ],
+      "locked": false
+    },
+    {
+      "piece": 1,
+      "orientation": "0,0,0;0,1,0;0,2,0;0,2,1;0,2,2;0,2,3",
+      "origin": [
+        0,
+        3,
+        2
+      ],
+      "locked": false
+    },
+    {
+      "piece": 8,
+      "orientation": "0,0,0;0,1,0;1,1,0;2,0,0;2,1,0;2,2,0",
+      "origin": [
+        0,
+        3,
+        3
+      ],
+      "locked": false
+    },
+    {
+      "piece": 6,
+      "orientation": "0,0,1;0,0,2;1,0,0;1,0,1;1,0,2;2,0,2",
+      "origin": [
+        2,
+        5,
+        3
+      ],
+      "locked": false
+    },
+    {
+      "piece": 32,
+      "orientation": "0,0,0;0,0,1;0,1,1;0,1,2;0,1,3;0,1,4",
+      "origin": [
+        1,
+        4,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 19,
+      "orientation": "0,0,1;0,0,2;0,1,0;0,1,1;0,2,1;0,3,1",
+      "origin": [
+        0,
+        2,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 37,
+      "orientation": "0,0,0;0,1,0;1,1,0",
+      "origin": [
+        0,
+        4,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 24,
+      "orientation": "0,0,2;1,0,0;1,0,1;1,0,2;2,0,1;3,0,1",
+      "origin": [
+        0,
+        2,
+        1
+      ],
+      "locked": false
+    },
+    {
+      "piece": 18,
+      "orientation": "0,1,0;1,1,0;2,1,0;3,0,0;3,1,0;3,2,0",
+      "origin": [
+        1,
+        3,
+        4
+      ],
+      "locked": false
+    },
+    {
+      "piece": 20,
+      "orientation": "0,0,3;1,0,2;1,0,3;2,0,0;2,0,1;2,0,2",
+      "origin": [
+        2,
+        3,
+        1
+      ],
+      "locked": false
+    },
+    {
+      "piece": 7,
+      "orientation": "0,0,2;1,0,0;1,0,2;2,0,0;2,0,1;2,0,2",
+      "origin": [
+        3,
+        4,
+        3
+      ],
+      "locked": false
+    },
+    {
+      "piece": 2,
+      "orientation": "0,0,1;1,0,1;2,0,0;2,0,1;2,0,2;2,0,3",
+      "origin": [
+        2,
+        5,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 21,
+      "orientation": "0,2,0;1,0,0;1,1,0;1,2,0;1,3,0;2,0,0",
+      "origin": [
+        3,
+        0,
+        5
+      ],
+      "locked": false
+    },
+    {
+      "piece": 11,
+      "orientation": "0,1,0;1,0,0;1,1,0;1,2,0;2,0,0;2,2,0",
+      "origin": [
+        1,
+        3,
+        2
+      ],
+      "locked": false
+    },
+    {
+      "piece": 3,
+      "orientation": "0,0,2;0,0,3;1,0,1;1,0,2;2,0,0;2,0,1",
+      "origin": [
+        3,
+        4,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 16,
+      "orientation": "0,0,0;1,0,0;1,1,0;2,0,0;2,1,0;3,0,0",
+      "origin": [
+        0,
+        2,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 9,
+      "orientation": "0,1,0;0,2,0;1,0,0;1,1,0;1,2,0;2,1,0",
+      "origin": [
+        2,
+        3,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 22,
+      "orientation": "0,3,0;1,1,0;1,2,0;1,3,0;2,0,0;2,1,0",
+      "origin": [
+        2,
+        1,
+        1
+      ],
+      "locked": false
+    },
+    {
+      "piece": 28,
+      "orientation": "0,1,0;1,0,0;1,1,0;1,2,0;1,3,0;2,1,0",
+      "origin": [
+        1,
+        0,
+        1
+      ],
+      "locked": false
+    },
+    {
+      "piece": 15,
+      "orientation": "0,0,0;0,1,0;0,2,0;0,3,0;1,0,0;1,3,0",
+      "origin": [
+        4,
+        0,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 36,
+      "orientation": "0,0,0;1,0,0;2,0,0",
+      "origin": [
+        1,
+        1,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 31,
+      "orientation": "0,0,0;0,0,1;0,0,2;0,0,3;0,0,4;1,0,3",
+      "origin": [
+        1,
+        0,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 13,
+      "orientation": "0,0,0;0,0,2;1,0,0;1,0,1;1,0,2;1,0,3",
+      "origin": [
+        2,
+        0,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 29,
+      "orientation": "0,0,1;1,0,1;1,0,2;2,0,0;2,0,1;3,0,1",
+      "origin": [
+        2,
+        0,
+        3
+      ],
+      "locked": false
+    },
+    {
+      "piece": 25,
+      "orientation": "0,0,0;0,0,1;0,1,1;0,2,1;0,2,2;0,2,3",
+      "origin": [
+        4,
+        0,
+        1
+      ],
+      "locked": false
+    },
+    {
+      "piece": 34,
+      "orientation": "0,0,0;1,0,0;2,0,0;2,0,1;3,0,1;4,0,1",
+      "origin": [
+        1,
+        1,
+        2
+      ],
+      "locked": false
+    },
+    {
+      "piece": 23,
+      "orientation": "0,0,0;0,0,1;1,0,1;2,0,1;3,0,1;3,0,2",
+      "origin": [
+        2,
+        1,
+        3
+      ],
+      "locked": false
+    },
+    {
+      "piece": 17,
+      "orientation": "0,0,1;0,0,2;0,0,3;0,1,0;0,1,1;0,1,2",
+      "origin": [
+        5,
+        0,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 5,
+      "orientation": "0,0,0;0,0,1;0,0,2;0,1,1;0,1,2;0,2,2",
+      "origin": [
+        5,
+        2,
+        0
+      ],
+      "locked": false
+    },
+    {
+      "piece": 4,
+      "orientation": "0,0,0;0,0,1;0,0,2;0,1,0;0,1,1;0,1,2",
+      "origin": [
+        5,
+        2,
+        3
+      ],
+      "locked": false
+    }
+  ],
+  "allowFlip": true,
+  "restrictions": {}
+}

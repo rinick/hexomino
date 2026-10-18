@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ef">
+  <title>Hexomino Studio · 拼图实验室</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23df623e'/%3E%3Cpath d='M8 7v18h17v-6H14V7Z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./web/style.css">
+  <script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Hexomino Studio 首页"><span class="brand-mark">h.</span><span>HEXOMINO <b>STUDIO</b><small>拼图实验室</small></span></a>
+    <div class="top-note"><span class="live-dot"></span>37 PIECES <span class="separator">/</span> 216 CELLS</div>
+    <div class="top-actions"><button id="import-btn" class="quiet">↥ 导入排布</button><button id="export-btn" class="outline">↧ 保存排布</button></div>
+  </header>
+  <main>
+    <section class="intro"><div><span class="eyebrow">ARRANGE. CONSTRAIN. SOLVE.</span><h1>每一块，都有它的位置。</h1><p>自由摆放，固定条件，让求解器完成剩下的拼图。</p></div>
+      <div class="mode-switch" role="tablist" aria-label="拼图模式"><button id="mode-flat" role="tab" aria-selected="true"><span>▦</span><div>平面拼图<small>12 × 18</small></div></button><button id="mode-cube" role="tab" aria-selected="false"><span>◇</span><div>立体堆叠<small>6 × 6 × 6</small></div></button></div>
+    </section>
+    <div class="app-layout">
+      <aside class="palette panel"><div class="panel-heading"><h2>拼块库 <span id="palette-count" class="count">37</span></h2><select id="palette-filter" aria-label="筛选拼块"><option value="all">全部拼块</option><option value="unused">尚未放置</option><option value="fixed">已固定</option></select></div><p class="muted palette-hint">点击选择，或拖入棋盘</p><div id="pieces" class="pieces" aria-label="可用拼块"></div><div class="palette-foot"><span class="dot orange"></span>选中 <span class="dot green"></span>已固定 <span class="dot gray"></span>求解结果</div></aside>
+      <section class="workspace panel"><div class="workspace-heading"><div><span class="eyebrow" id="board-kicker">THE FLAT CHALLENGE</span><h2 id="board-title">12 × 18 平面拼图</h2></div><div class="workspace-actions"><button id="undo-btn" class="icon-btn" title="撤销（Ctrl / ⌘ Z）" aria-label="撤销">↶</button><button id="example-btn" class="quiet">示例解</button></div></div>
+        <div class="board-summary"><span id="fill-count">0 / 216 格</span><div class="fill-track"><div id="fill-bar"></div></div><span id="fixed-count">0 块固定</span></div>
+        <div id="cube-tools" class="cube-tools" hidden><div class="view-switch"><button id="view-three" class="active">三维模型</button><button id="view-layer">分层编辑</button></div><label>放置层 Z <select id="layer-select" aria-label="放置层 Z"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label></div>
+        <div class="stage" id="stage"><div id="board-flat" class="board-wrap"></div><div id="three-view" hidden></div><div id="board-layer" class="board-wrap" hidden></div><div id="stage-label" class="stage-label">18 列 × 12 行 · 每块只用一次</div></div>
+        <div class="board-footer"><span id="board-help">R 旋转 · F 翻面 · Delete 移除</span><span class="local-badge">◉ 本地计算</span></div>
+        <div class="board-actions"><button id="lock-all" class="quiet">固定全部</button><button id="clear-result" class="quiet">仅保留固定</button><button id="clear-all" class="quiet danger">清空棋盘</button></div>
+        <details class="help"><summary>如何使用？</summary><p>从左侧选择拼块，拖到棋盘，或输入坐标后点击「放置并固定」。手动放置的拼块默认固定，求解时保持位置与朝向。点击已放置拼块可移动、旋转或移除。</p><p>立体模式支持绕 X / Y / Z 轴旋转；选择放置层后，可直接拖入三维视图，也可切换「分层编辑」精确摆放。坐标从 0 开始，X 向右、Y 向上、Z 为高度。剖切显示只影响观察，不改变约束。</p><p>求解覆盖完整单位格，使用每块一次；不把镂空孔洞当作可穿插空间，不验证实体插入顺序。只有穷尽搜索才会判定无解，超时与停止均表示尚未确定。</p></details>
+      </section>
+      <aside class="inspector"><section class="panel selection"><div class="panel-heading"><h2>当前拼块</h2><span id="selection-status" class="tag">未放置</span></div><div class="selected-piece"><div id="selected-thumbnail"></div><div><h3 id="selected-name">H01_L</h3><p id="selected-size" class="muted"></p></div></div><div class="rotate-buttons" id="rotation-tools"><button id="rotate-z" title="绕 Z 轴旋转 90°">↻ 旋转 90°</button><button id="flip-piece">⇄ 翻面</button><button id="rotate-x" hidden>↻ X</button><button id="rotate-y" hidden>↻ Y</button></div><div class="position-inputs"><label>X<input id="pos-x" type="number" min="0" max="17" value="0" step="1"></label><label>Y<input id="pos-y" type="number" min="0" max="11" value="0" step="1"></label><label>Z<input id="pos-z" type="number" min="0" max="0" value="0" step="1" disabled></label></div><button id="place-btn" class="outline full">＋ 放置并固定</button><div class="selection-actions"><label class="check"><input id="piece-locked" type="checkbox" disabled>固定位置与朝向</label><button id="remove-btn" class="quiet danger" disabled>移除</button></div><div class="divider"></div><label class="check"><input id="orientation-only" type="checkbox">求解时仅允许当前朝向</label><label id="flip-label" class="check"><input id="allow-flip" type="checkbox" checked>平面求解允许翻面</label><div id="view-options" hidden><div class="divider"></div><label class="range-label">显示至第 <span id="visible-level">6</span> 层<input id="layer-cut" type="range" min="1" max="6" value="6" aria-label="显示层数"></label><label class="range-label">分解视图<input id="explode" type="range" min="0" max="100" value="0" aria-label="分解程度"></label><button id="reset-camera" class="quiet full">重置视角</button></div></section>
+        <section class="panel solver"><span class="eyebrow">FIND THE MISSING PIECES</span><h2>让剩下的拼块归位。</h2><p class="muted">保留固定条件，搜索一个完整解。</p><label class="time-label">搜索时间<select id="time-limit"><option value="10000">10 秒</option><option value="60000" selected>1 分钟</option><option value="300000">5 分钟</option><option value="0">不限时，手动停止</option></select></label><button id="solve-btn" class="primary full">开始求解 <span>↗</span></button><button id="stop-btn" class="outline full" hidden>停止搜索</button><div id="solver-status" class="solver-status" role="status" aria-live="polite"><span class="status-dot"></span><span id="status-text">等待你的第一块拼图</span></div><div class="search-track"><div id="search-bar"></div></div><div class="solver-stats"><div><strong id="search-depth">0 / 37</strong><span>最深排布</span></div><div><strong id="search-nodes">0</strong><span>搜索节点</span></div><div><strong id="search-time">0.0 s</strong><span>用时</span></div></div></section>
+      </aside>
+    </div>
+    <footer class="page-footer"><span>HEXOMINO V6 <b>·</b> 35 HEXOMINOES + 2 TRIOMINOES</span><span>一格 12.7 mm · 开孔 3/5 · 边厚 1/5</span></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <input id="import-file" type="file" accept=".json,application/json" hidden>
+  <script type="module" src="./web/app.js"></script>
+</body>
+</html>

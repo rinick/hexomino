@@ -1,0 +1,25 @@
+# Installed dependencies and generated build/test output
+node_modules/
+dist/
+coverage/
+.cache/
+
+# Local logs and temporary files
+*.log
+*.tmp
+*.bak
+*~
+
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+/.aws/
+/.codex/
+/.agents/
+.idea/
+.vscode/
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
