@@ -1,5 +1,5 @@
 /* HEXOMINO V6 - LOCAL HALF-CELL CUTS FROM ALL EXPOSED FACES
-   Construct a FULL SOLID footprint prism, then boolean subtract:
+   Round the FULL SOLID footprint prism externally, then boolean subtract:
    1) continuous front silhouette aperture cut 0.5 cell deep from +Z and -Z
    2) circular local bores 0.5 cell inward ONLY from exposed +/-X faces
    3) circular local bores 0.5 cell inward ONLY from exposed +/-Y faces
@@ -7,12 +7,14 @@
    No long drill reaches across multiple cells. Boolean difference of monolithic solid.
    Exact scale: cell 12.7 mm = half inch.
    Updated 2026-10-18: openings and fillets 3/5 cell; rims 1/5 cell; no clearance.
+   External convex edges/corners rounded to cell/10 without expanding the envelope.
 */
 cell = 12.7;
 side_diameter_ratio=3/5;        // side diameter = 7.62 mm
 front_fillet_diameter_ratio=3/5;// front opening corner diameter = 7.62 mm
 front_frame = cell/5;          // front rim width = 2.54 mm
 clearance = 0;                 // temporarily no inset or assembly gap
+outer_r = cell/10;             // external edge/corner radius = 1.27 mm
 facets = 64;                   // circle smoothness
 piece_id = 0;                   // 0..36
 cut_depth = cell/2;             // physical inward depth = 6.35mm, half cell
@@ -22,6 +24,7 @@ side_r=cell*side_diameter_ratio/2;
 front_r=cell*front_fillet_diameter_ratio/2;
 assert(side_r < cell/2-clearance, "Side hole radius too large");
 assert(abs(front_r+front_frame-cell/2) < 0.000001, "Front rim and radius must sum to half a cell");
+assert(outer_r > 0 && outer_r < front_frame && outer_r+clearance < cell/2, "External radius too large");
 all_cells = [
   [[0, 0], [0, 1], [0, 2], [1, 0], [2, 0], [3, 0]],
   [[0, 2], [1, 0], [1, 1], [1, 2], [2, 2], [3, 2]],
@@ -115,11 +118,19 @@ module z_axis_half_depth_openings(cs){
     translate([0,0,cell-cut_depth-join_eps])
        linear_extrude(height=cut_depth+2*join_eps) large_front_opening(cs);
 }
+module rounded_outer_solid(cs){
+    // Inset the monolithic solid first, so the sphere restores the original bounds.
+    minkowski(){
+        translate([0,0,clearance+outer_r])
+            linear_extrude(height=cell-2*(clearance+outer_r))
+                offset(delta=-(clearance+outer_r)) footprint(cs);
+        // Six exact axis poles preserve all three spans and cubic rotation symmetry.
+        sphere(r=outer_r, style="octa");
+    }
+}
 module piece(cs){
   difference(){
-    translate([0,0,clearance])
-      linear_extrude(height=cell-2*clearance)
-        offset(delta=-clearance) footprint(cs);
+    rounded_outer_solid(cs);
     z_axis_half_depth_openings(cs);
     x_axis_local_drills(cs);
     y_axis_local_drills(cs);
