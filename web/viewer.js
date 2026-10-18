@@ -25,15 +25,15 @@ export async function pieceThumbnail(shape) {
       const light = new THREE.DirectionalLight('#ffffff', 3.2);
       light.position.set(-4, -6, 12); thumbnailScene.add(light);
       thumbnailCamera = new THREE.OrthographicCamera(-3, 3, 2, -2, .1, 100);
-      thumbnailCamera.up.set(0, 0, 1);
+      thumbnailCamera.up.set(0, 1, 0);
     }
     geometry.computeBoundingBox();
     const center = geometry.boundingBox.getCenter(new THREE.Vector3());
     const size = geometry.boundingBox.getSize(new THREE.Vector3());
-    const radius = Math.max(size.x, size.y, size.z) * .58 + .3;
+    const radius = Math.max(size.x / 1.5, size.y) * .58 + .3;
     thumbnailCamera.left = -radius * 1.5; thumbnailCamera.right = radius * 1.5;
     thumbnailCamera.top = radius; thumbnailCamera.bottom = -radius;
-    thumbnailCamera.position.copy(center).add(new THREE.Vector3(6, -8, 10));
+    thumbnailCamera.position.copy(center).add(new THREE.Vector3(0, 0, 10));
     thumbnailCamera.lookAt(center); thumbnailCamera.updateProjectionMatrix();
     const mesh = new THREE.Mesh(geometry, new THREE.MeshStandardMaterial({ color: colorFor(shape.id), roughness: .6, metalness: .06 }));
     thumbnailScene.add(mesh); thumbnailRenderer.render(thumbnailScene, thumbnailCamera);
@@ -56,7 +56,7 @@ export class PuzzleViewer {
     this.owners = new Map();
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color('#fafbf8');
-    this.camera = planar ? new THREE.OrthographicCamera(0, this.dims[0], this.dims[1], 0, .1, 100) : new THREE.PerspectiveCamera(34, 1, 0.1, 100);
+    this.camera = planar ? new THREE.OrthographicCamera(0, this.dims[0], this.dims[1], 0, .1, 100) : new THREE.PerspectiveCamera(34, 1, 0.1, 300);
     this.camera.up.set(0, planar ? 1 : 0, planar ? 0 : 1);
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
     this.renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
@@ -123,8 +123,10 @@ export class PuzzleViewer {
       this.camera.lookAt(0, 0, 0);
       return;
     }
-    this.camera.position.set(11, -12, 11);
     this.controls.target.set(3, 3, 2.5);
+    const scale = 1 + (this.explode ?? 0) * .016;
+    this.controls.maxDistance = 35 * scale;
+    this.camera.position.set(11, -12, 11).sub(this.controls.target).multiplyScalar(scale).add(this.controls.target);
     this.controls.update();
   }
 
@@ -205,7 +207,14 @@ export class PuzzleViewer {
     this.selected = selected;
     this.layer = this.mode === 'flat' ? 0 : (options.layer ?? this.layer);
     this.cut = this.mode === 'flat' ? 1 : this.layerView ? this.layer + 1 : (options.cut ?? this.cut);
+    const previousExplode = this.explode;
     this.explode = this.planar ? 0 : (options.explode ?? this.explode);
+    if (this.controls && this.explode !== previousExplode) {
+      const scale = 1 + this.explode * .016;
+      this.controls.maxDistance = 35 * scale;
+      this.camera.position.sub(this.controls.target).multiplyScalar(scale / (1 + previousExplode * .016)).add(this.controls.target);
+      this.controls.update();
+    }
     this.cutPlane.constant = this.cut + .00001;
     this.bottomPlane.constant = -this.layer + .00001;
     this.grid.position.z = this.layerView ? this.layer - .02 : -.02;
@@ -223,16 +232,19 @@ export class PuzzleViewer {
     for (const child of [...this.group.children]) { this.group.remove(child); child.material.dispose(); }
     for (const { p, shape, geometry } of loaded) {
       const o = orientationsFor(shape, 'cube').find(o => o.key === p.orientation);
+      const displacement = p.origin.map((v, a) => p.ghost ? 0 : (v + o.size[a] / 2 - 3) * this.explode * .016);
+      const cutPlane = this.cutPlane.clone();
+      cutPlane.constant += displacement[2];
       const material = new THREE.MeshStandardMaterial({
         color: p.ghost ? (p.valid ? '#81ae86' : '#dd6a57') : colorFor(p.piece),
         roughness: 0.6, metalness: 0.06,
         transparent: p.ghost, opacity: p.ghost ? 0.65 : 1, depthWrite: !p.ghost,
-        clippingPlanes: this.layerView ? [this.cutPlane, this.bottomPlane] : [this.cutPlane], side: THREE.FrontSide,
+        clippingPlanes: this.layerView ? [cutPlane, this.bottomPlane] : [cutPlane], side: THREE.FrontSide,
         emissive: p.piece === selected ? '#463520' : '#000000', emissiveIntensity: p.piece === selected ? 0.18 : 0,
       });
       const mesh = new THREE.Mesh(geometry, material);
       const m = o.matrix;
-      const t = p.origin.map((v, a) => v + o.offset[a] + (p.ghost ? 0 : (v + o.size[a] / 2 - 3) * this.explode * 0.016));
+      const t = p.origin.map((v, a) => v + o.offset[a] + displacement[a]);
       mesh.matrixAutoUpdate = false;
       mesh.matrix.set(m[0][0], m[0][1], m[0][2], t[0], m[1][0], m[1][1], m[1][2], t[1], m[2][0], m[2][1], m[2][2], t[2], 0, 0, 0, 1);
       mesh.userData = { placement: p, ghost: p.ghost };
