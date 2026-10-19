@@ -5,7 +5,7 @@ import { BOARDS, CELL_MM, colorFor, orientationsFor, placementCells, cellIndex }
 
 const geometries = new Map();
 function loadGeometry(shape) {
-  if (!geometries.has(shape.id)) geometries.set(shape.id, new STLLoader().loadAsync(`./STL_37/${shape.name}.stl`).then(g => {
+  if (!geometries.has(shape.id)) geometries.set(shape.id, new STLLoader().loadAsync(`./web/models/${shape.name}.stl`).then(g => {
     g.scale(1 / CELL_MM, 1 / CELL_MM, 1 / CELL_MM);
     g.computeBoundingSphere();
     return g;

@@ -96,7 +96,10 @@ async function ensureViewer(kind) {
 }
 function renderViews() {
   const kind = state.mode === 'flat' ? 'flat' : state.view === 'three' ? 'cube' : 'layer';
-  ensureViewer(kind).then(v => { v.resize(); return v.update(state.placements, state.selected, ghost, state); }).catch(error => {
+  ensureViewer(kind).then(v => {
+    if (v.mode !== state.mode || (v.mode === 'cube' && v.layerView !== (state.view === 'layer'))) return;
+    v.resize(); return v.update(state.placements, state.selected, ghost, state);
+  }).catch(error => {
     toast(`STL 视图加载失败：${error.message}。请检查浏览器是否支持 WebGL。`);
   });
 }

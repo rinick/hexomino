@@ -1,0 +1,1628 @@
+{
+  "generator": "OpenSCAD 2026.10.18 / CGAL, binary STL",
+  "cell_mm": 16.0,
+  "lego_pitch_mm": 8,
+  "side_hole_type": "technic_axle_cross",
+  "axle_nominal_span_mm": 4.8,
+  "axle_nominal_arm_mm": 1.8,
+  "axle_clearance_per_wall_mm": 0.1,
+  "axle_hole_span_mm": 5.0,
+  "axle_hole_arm_mm": 2.0,
+  "side_hole_pitch_mm": 8.0,
+  "physical_fit_tested": false,
+  "front_fillet_diameter_ratio": "3/5",
+  "front_opening_width_mm": 9.6,
+  "front_fillet_diameter_mm": 9.6,
+  "front_frame_mm": 3.2,
+  "model_variant": "web",
+  "external_radius_ratio": "1/10",
+  "external_radius_mm": 1.6,
+  "front_flat_land_mm": 1.6,
+  "external_envelope_preserved": true,
+  "clearance_mm": 0,
+  "cut_depth_mm": 8.0,
+  "facets": 64,
+  "dimension_tolerance_mm": 0.0001,
+  "axle_profile_area_tolerance_mm2": 0.001,
+  "piece_count": 37,
+  "center_axle_holes_checked": 488,
+  "between_cell_axle_holes_checked": 172,
+  "total_axle_holes_checked": 660,
+  "watertight_count": 37,
+  "total_volume_cm3": 350.41106,
+  "pla_mass_g_at_1_24": 434.509714,
+  "petg_mass_g_at_1_27": 445.022046,
+  "pieces": [
+    {
+      "name": "H01_L",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 7976,
+      "volume_mm3": 9827.212469,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 5,
+      "external_spherical_corners_checked": 10,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893665765,
+      "external_max_radius_error_mm": 3.063354254928541e-06,
+      "front_fillet_arcs_checked": 5,
+      "front_fillet_max_radius_error_mm": 1.9966254116710047e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 8,
+      "axle_holes_checked": 22,
+      "coplanar_runs_checked": 6,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H02_T",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8372,
+      "volume_mm3": 9994.996622,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.001929788989398773,
+      "external_max_radius_error_mm": 3.6560266296614685e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 6,
+      "axle_holes_checked": 20,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H03_STEP",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 9176,
+      "volume_mm3": 10330.560831,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 8,
+      "external_spherical_corners_checked": 16,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.001929788989398773,
+      "external_max_radius_error_mm": 3.6560266296614685e-06,
+      "front_fillet_arcs_checked": 8,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 2,
+      "axle_holes_checked": 16,
+      "coplanar_runs_checked": 12,
+      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H04",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 6016,
+      "volume_mm3": 6848.550138,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        48.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 4,
+      "external_spherical_corners_checked": 8,
+      "external_horizontal_arcs_checked": 20,
+      "external_horizontal_section_max_radius_error_mm": 0.0019288910629473577,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 4,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 10,
+      "between_cell_axle_holes_checked": 6,
+      "axle_holes_checked": 16,
+      "coplanar_runs_checked": 4,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H05",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 7592,
+      "volume_mm3": 8589.554854,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        48.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 24,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893665765,
+      "external_max_radius_error_mm": 3.063354254928541e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 12,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 16,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H06",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 7592,
+      "volume_mm3": 8589.555213,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        48.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 24,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893665765,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 12,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 16,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H07",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8376,
+      "volume_mm3": 9994.99528,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        48.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893665765,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 6,
+      "axle_holes_checked": 20,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H08",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8772,
+      "volume_mm3": 10162.778097,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        48.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 7,
+      "external_spherical_corners_checked": 14,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893665765,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 7,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 18,
+      "coplanar_runs_checked": 10,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H09",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 7992,
+      "volume_mm3": 8757.337895,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        48.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 7,
+      "external_spherical_corners_checked": 14,
+      "external_horizontal_arcs_checked": 24,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893334919,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 7,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 12,
+      "between_cell_axle_holes_checked": 2,
+      "axle_holes_checked": 14,
+      "coplanar_runs_checked": 10,
+      "axle_profile_max_area_error_mm2": 5.371473787840739e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H10",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 7596,
+      "volume_mm3": 8589.555564,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        48.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 24,
+      "external_horizontal_section_max_radius_error_mm": 0.001929788989398773,
+      "external_max_radius_error_mm": 3.6560266296614685e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 12,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 16,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H11",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 9172,
+      "volume_mm3": 10330.56078,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        48.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 8,
+      "external_spherical_corners_checked": 16,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893334919,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 8,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 2,
+      "axle_holes_checked": 16,
+      "coplanar_runs_checked": 12,
+      "axle_profile_max_area_error_mm2": 5.371473787840739e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H12",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 7196,
+      "volume_mm3": 8421.772556,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 5,
+      "external_spherical_corners_checked": 10,
+      "external_horizontal_arcs_checked": 24,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893665765,
+      "external_max_radius_error_mm": 3.063354254928541e-06,
+      "front_fillet_arcs_checked": 5,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 12,
+      "between_cell_axle_holes_checked": 6,
+      "axle_holes_checked": 18,
+      "coplanar_runs_checked": 6,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H13",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8772,
+      "volume_mm3": 10162.777605,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 7,
+      "external_spherical_corners_checked": 14,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893665765,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 7,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 18,
+      "coplanar_runs_checked": 10,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H14",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8776,
+      "volume_mm3": 10162.777967,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 7,
+      "external_spherical_corners_checked": 14,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893334919,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 7,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 18,
+      "coplanar_runs_checked": 10,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H15",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8376,
+      "volume_mm3": 9994.995293,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019288910629915446,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 6,
+      "axle_holes_checked": 20,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H16",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 7592,
+      "volume_mm3": 8589.555052,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 24,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893665765,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 12,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 16,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H17",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 7592,
+      "volume_mm3": 8589.555414,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 24,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893334919,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 12,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 16,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H18",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8372,
+      "volume_mm3": 9994.995918,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893665765,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 6,
+      "axle_holes_checked": 20,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H19",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8772,
+      "volume_mm3": 10162.7786,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 7,
+      "external_spherical_corners_checked": 14,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893334919,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 7,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 18,
+      "coplanar_runs_checked": 10,
+      "axle_profile_max_area_error_mm2": 5.371473787840739e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H20",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8776,
+      "volume_mm3": 10162.778564,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 7,
+      "external_spherical_corners_checked": 14,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.001929788989398773,
+      "external_max_radius_error_mm": 3.6560266296614685e-06,
+      "front_fillet_arcs_checked": 7,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 18,
+      "coplanar_runs_checked": 10,
+      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H21",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8772,
+      "volume_mm3": 10162.778585,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 7,
+      "external_spherical_corners_checked": 14,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.001929788989398773,
+      "external_max_radius_error_mm": 3.6560266296614685e-06,
+      "front_fillet_arcs_checked": 7,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 18,
+      "coplanar_runs_checked": 10,
+      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H22",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8776,
+      "volume_mm3": 10162.778544,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 7,
+      "external_spherical_corners_checked": 14,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.001929788989398773,
+      "external_max_radius_error_mm": 3.6560266296614685e-06,
+      "front_fillet_arcs_checked": 7,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 18,
+      "coplanar_runs_checked": 10,
+      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H23",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8376,
+      "volume_mm3": 9994.996265,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.001929788989398773,
+      "external_max_radius_error_mm": 3.6560266296614685e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 6,
+      "axle_holes_checked": 20,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H24",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8772,
+      "volume_mm3": 10162.778599,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 7,
+      "external_spherical_corners_checked": 14,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893334919,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 7,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 18,
+      "coplanar_runs_checked": 10,
+      "axle_profile_max_area_error_mm2": 5.371473787840739e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H25",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8376,
+      "volume_mm3": 9994.996276,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.001929788989398773,
+      "external_max_radius_error_mm": 3.6560266296614685e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 6,
+      "axle_holes_checked": 20,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H26",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 9172,
+      "volume_mm3": 10330.560872,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 8,
+      "external_spherical_corners_checked": 16,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.001929788989398773,
+      "external_max_radius_error_mm": 3.6560266296614685e-06,
+      "front_fillet_arcs_checked": 8,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 2,
+      "axle_holes_checked": 16,
+      "coplanar_runs_checked": 12,
+      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H27",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8772,
+      "volume_mm3": 10162.778203,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 7,
+      "external_spherical_corners_checked": 14,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.001929788989398773,
+      "external_max_radius_error_mm": 3.6560266296614685e-06,
+      "front_fillet_arcs_checked": 7,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 18,
+      "coplanar_runs_checked": 10,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H28",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 9168,
+      "volume_mm3": 10330.561245,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 8,
+      "external_spherical_corners_checked": 16,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893334919,
+      "external_max_radius_error_mm": 3.1591831679556037e-06,
+      "front_fillet_arcs_checked": 8,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 2,
+      "axle_holes_checked": 16,
+      "coplanar_runs_checked": 12,
+      "axle_profile_max_area_error_mm2": 5.371473787840739e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H29",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 9168,
+      "volume_mm3": 10330.56123,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          48.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        64.0,
+        48.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 8,
+      "external_spherical_corners_checked": 16,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.001929788989398773,
+      "external_max_radius_error_mm": 3.6560266296614685e-06,
+      "front_fillet_arcs_checked": 8,
+      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 2,
+      "axle_holes_checked": 16,
+      "coplanar_runs_checked": 12,
+      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H30",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 7976,
+      "volume_mm3": 9827.212372,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          80.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        80.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 5,
+      "external_spherical_corners_checked": 10,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019299542211725917,
+      "external_max_radius_error_mm": 4.215340651203547e-06,
+      "front_fillet_arcs_checked": 5,
+      "front_fillet_max_radius_error_mm": 3.129172777782685e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 8,
+      "axle_holes_checked": 22,
+      "coplanar_runs_checked": 6,
+      "axle_profile_max_area_error_mm2": 5.37147098618439e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H31",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8372,
+      "volume_mm3": 9994.995048,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          80.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        80.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019299542211725917,
+      "external_max_radius_error_mm": 4.215340651203547e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 3.129172777782685e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 6,
+      "axle_holes_checked": 20,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371470986184391e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H32",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8376,
+      "volume_mm3": 9994.996179,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          80.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        80.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.00192995422105402,
+      "external_max_radius_error_mm": 4.215340650093324e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 3.129172777782685e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 6,
+      "axle_holes_checked": 20,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.3714709859609574e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H33",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8372,
+      "volume_mm3": 9994.995033,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          80.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        80.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019299542211725917,
+      "external_max_radius_error_mm": 4.215340651203547e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 3.129172777782685e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 6,
+      "axle_holes_checked": 20,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.3714709861844894e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H34",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 8376,
+      "volume_mm3": 9994.995781,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          80.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        80.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 6,
+      "external_spherical_corners_checked": 12,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.00192995422105402,
+      "external_max_radius_error_mm": 4.215340650093324e-06,
+      "front_fillet_arcs_checked": 6,
+      "front_fillet_max_radius_error_mm": 3.129172777782685e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 6,
+      "axle_holes_checked": 20,
+      "coplanar_runs_checked": 8,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "H35",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 7576,
+      "volume_mm3": 9659.429901,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          96.0,
+          15.999999,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        96.0,
+        15.999999,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 4,
+      "external_spherical_corners_checked": 8,
+      "external_horizontal_arcs_checked": 28,
+      "external_horizontal_section_max_radius_error_mm": 0.0019299542211725917,
+      "external_max_radius_error_mm": 4.215340651203547e-06,
+      "front_fillet_arcs_checked": 4,
+      "front_fillet_max_radius_error_mm": 3.129172777782685e-06,
+      "center_axle_holes_checked": 14,
+      "between_cell_axle_holes_checked": 10,
+      "axle_holes_checked": 24,
+      "coplanar_runs_checked": 4,
+      "axle_profile_max_area_error_mm2": 5.371470986184419e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "T36_BAR3",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 5224,
+      "volume_mm3": 5443.109253,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          15.999999,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        48.0,
+        15.999999,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 4,
+      "external_spherical_corners_checked": 8,
+      "external_horizontal_arcs_checked": 16,
+      "external_horizontal_section_max_radius_error_mm": 0.0019297889893665765,
+      "external_max_radius_error_mm": 3.063354254928541e-06,
+      "front_fillet_arcs_checked": 4,
+      "front_fillet_max_radius_error_mm": 1.9966254116710047e-06,
+      "center_axle_holes_checked": 8,
+      "between_cell_axle_holes_checked": 4,
+      "axle_holes_checked": 12,
+      "coplanar_runs_checked": 4,
+      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    },
+    {
+      "name": "T37_L3",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "zero_area_triangles": 0,
+      "triangles": 5624,
+      "volume_mm3": 5610.891727,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          32.0,
+          32.0,
+          15.999999
+        ]
+      ],
+      "size_mm": [
+        32.0,
+        32.0,
+        15.999999
+      ],
+      "front_and_back_continuous_opening": true,
+      "front_rim_nominal_mm": 3.2,
+      "front_flat_land_mm": 1.6,
+      "external_radius_mm": 1.6,
+      "external_vertical_arcs_checked": 5,
+      "external_spherical_corners_checked": 10,
+      "external_horizontal_arcs_checked": 16,
+      "external_horizontal_section_max_radius_error_mm": 0.0019288910629915446,
+      "external_max_radius_error_mm": 2.5562977330473302e-06,
+      "front_fillet_arcs_checked": 5,
+      "front_fillet_max_radius_error_mm": 1.9966254116710047e-06,
+      "center_axle_holes_checked": 8,
+      "between_cell_axle_holes_checked": 2,
+      "axle_holes_checked": 10,
+      "coplanar_runs_checked": 6,
+      "axle_profile_max_area_error_mm2": 5.058855395715916e-06,
+      "nominal_axle_containment_and_clearance_verified": true
+    }
+  ]
+}

@@ -42,9 +42,9 @@ test('orientations are unique proper rotations; flat flip is a physical half-tur
   }
 });
 
-test('real STL geometry transforms to exactly the occupied cell bounds', () => {
+for (const directory of ['STL_37', 'web/models']) test(`${directory} STL geometry transforms to exactly the occupied cell bounds`, () => {
   const s = shapes[0];
-  const bytes = readFileSync(new URL(`../STL_37/${s.name}.stl`, import.meta.url));
+  const bytes = readFileSync(new URL(`../${directory}/${s.name}.stl`, import.meta.url));
   const geometry = new STLLoader().parse(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength));
   geometry.scale(1 / CELL_MM, 1 / CELL_MM, 1 / CELL_MM);
   for (const o of orientationsFor(s, 'cube')) {

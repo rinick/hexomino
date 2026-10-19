@@ -1,5 +1,5 @@
 export const BOARDS = { flat: [18, 12, 1], cube: [6, 6, 6] };
-export const CELL_MM = 12.7;
+export const CELL_MM = 16;
 export const colorFor = id => `hsl(${(id * 137.508 + 12) % 360}, 57%, 57%)`;
 export const cellIndex = ([x, y, z], [w, h]) => x + w * (y + h * z);
 const keyOf = cells => cells.map(c => c.join(',')).sort().join(';');

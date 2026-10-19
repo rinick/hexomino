@@ -1,30 +1,34 @@
-/* HEXOMINO V6 - LOCAL HALF-CELL CUTS FROM ALL EXPOSED FACES
-   Round the FULL SOLID footprint prism externally, then boolean subtract:
-   1) continuous front silhouette aperture cut 0.5 cell deep from +Z and -Z
-   2) circular local bores 0.5 cell inward ONLY from exposed +/-X faces
-   3) circular local bores 0.5 cell inward ONLY from exposed +/-Y faces
-   Facing half-depth cuts share a very small overlap at the middle, so they connect.
-   No long drill reaches across multiple cells. Boolean difference of monolithic solid.
-   Exact scale: cell 12.7 mm = half inch.
-   Updated 2026-10-18: openings and fillets 3/5 cell; rims 1/5 cell; no clearance.
-   External convex edges/corners rounded to cell/10 without expanding the envelope.
+/* HEXOMINO V6 - TECHNIC PITCH AND LOCAL AXLE HOLES
+   Updated 2026-10-19: one cell = two 8 mm LEGO Technic pitches = 16 mm.
+   Round the monolithic footprint prism, then subtract the continuous front aperture
+   and face-local axle holes. Every exposed cell face has a centered axle hole;
+   adjacent coplanar exposed faces also share a hole at their boundary (8 mm pitch).
+   Cuts reach only half a cell inward. Axle dimensions stay in physical millimetres.
+   Standard axle target 4.8 mm span / 1.8 mm arm; hole allowance 0.10 mm per wall.
+   External radius: cell/20 print, cell/10 web. Nominal outer clearance remains zero.
 */
-cell = 12.7;
-side_diameter_ratio=3/5;        // side diameter = 7.62 mm
-front_fillet_diameter_ratio=3/5;// front opening corner diameter = 7.62 mm
-front_frame = cell/5;          // front rim width = 2.54 mm
-clearance = 0;                 // temporarily no inset or assembly gap
-outer_r = cell/10;             // external edge/corner radius = 1.27 mm
-facets = 64;                   // circle smoothness
-piece_id = 0;                   // 0..36
-cut_depth = cell/2;             // physical inward depth = 6.35mm, half cell
-join_eps=0.02;                  // 0.02 mm overlap to avoid coincident cut surfaces
+cell = 16;
+front_fillet_diameter_ratio=3/5;
+front_frame = cell/5;          // 3.2 mm nominal front rim
+clearance = 0;
+model_variant = "print";       // "print" or "web"
+outer_r = cell/(model_variant == "web" ? 10 : 20); // 1.6 mm web / 0.8 mm print
+axle_span = 4.8;               // nominal axle envelope, independent of cell scaling
+axle_arm = 1.8;
+axle_clearance = 0.10;         // user-selected allowance on EACH hole wall
+axle_hole_span = axle_span+2*axle_clearance; // 5.0 mm
+axle_hole_arm = axle_arm+2*axle_clearance;   // 2.0 mm
+facets = 64;
+piece_id = 0;                 // 0..36
+cut_depth = cell/2;           // 8 mm local inward depth
+join_eps = cell/635;          // same relative boolean overlap as the 12.7 mm design
 $fn=facets;
-side_r=cell*side_diameter_ratio/2;
-front_r=cell*front_fillet_diameter_ratio/2;
-assert(side_r < cell/2-clearance, "Side hole radius too large");
-assert(abs(front_r+front_frame-cell/2) < 0.000001, "Front rim and radius must sum to half a cell");
-assert(outer_r > 0 && outer_r < front_frame && outer_r+clearance < cell/2, "External radius too large");
+front_r=cell*front_fillet_diameter_ratio/2; // 4.8 mm
+assert(axle_arm>0 && axle_arm<axle_span && axle_clearance>=0, "Invalid axle profile");
+assert(axle_hole_span<cell/2, "Axle holes would overlap at the half-cell pitch");
+assert(abs(front_r+front_frame-cell/2)<0.000001, "Front rim and radius must sum to half a cell");
+assert(model_variant=="print" || model_variant=="web", "Unknown model variant");
+assert(outer_r>0 && outer_r<front_frame && outer_r+clearance<cell/2, "External radius too large");
 all_cells = [
   [[0, 0], [0, 1], [0, 2], [1, 0], [2, 0], [3, 0]],
   [[0, 2], [1, 0], [1, 1], [1, 2], [2, 2], [3, 2]],
@@ -85,31 +89,36 @@ module large_front_opening(cs){
             translate([(x+0.5)*cell,(y+0.5)*cell]) square(cell);
     }
 }
-// Each individual EXPOSED side face is drilled only 0.5 cell inward.
-// A neighbor in the bore direction means the face is not exposed: skip it.
-module x_axis_local_drills(cs){
-    for(c=cs) let(x=c[0],y=c[1]){
-      if(!included(x-1,y,cs))
-        // -X face x*cell, cylinder runs from outside toward +X.
-        translate([x*cell-join_eps, (y+0.5)*cell, cell/2])
-          rotate([0,90,0]) cylinder(r=side_r,h=cut_depth+2*join_eps);
-      if(!included(x+1,y,cs))
-        // +X face (x+1)*cell, runs from outside toward -X.
-        translate([(x+1)*cell+join_eps, (y+0.5)*cell, cell/2])
-          rotate([0,-90,0]) cylinder(r=side_r,h=cut_depth+2*join_eps);
+// Only exposed coplanar faces receive axle holes; drill locally half a cell.
+function exposed(x,y,axis,direction,cs)=
+    !included(x+(axis==0 ? direction : 0),y+(axis==1 ? direction : 0),cs);
+module axle_profile(){
+    // Standard axle envelope plus the independent, user-selected per-wall allowance.
+    intersection(){
+        circle(d=axle_hole_span);
+        union(){
+            square([axle_hole_span,axle_hole_arm],center=true);
+            square([axle_hole_arm,axle_hole_span],center=true);
+        }
     }
 }
-module y_axis_local_drills(cs){
-    for(c=cs) let(x=c[0],y=c[1]){
-      if(!included(x,y-1,cs))
-        // -Y face y*cell, toward +Y.
-        translate([(x+0.5)*cell, y*cell-join_eps, cell/2])
-          rotate([-90,0,0]) cylinder(r=side_r,h=cut_depth+2*join_eps);
-      if(!included(x,y+1,cs))
-        // +Y face (y+1)*cell, toward -Y.
-        translate([(x+0.5)*cell,(y+1)*cell+join_eps,cell/2])
-          rotate([90,0,0]) cylinder(r=side_r,h=cut_depth+2*join_eps);
-    }
+module side_axle_drill(axis,direction,coordinate,tangent){
+    translate(axis==0 ? [coordinate+direction*join_eps,tangent,cell/2]
+                      : [tangent,coordinate+direction*join_eps,cell/2])
+        rotate(axis==0 ? [0,-90*direction,0] : [90*direction,0,0])
+            linear_extrude(height=cut_depth+2*join_eps) axle_profile();
+}
+module side_axle_drills(cs){
+    for(axis=[0,1],direction=[-1,1],c=cs)
+        let(x=c[0],y=c[1],tangent=c[1-axis],
+            coordinate=(c[axis]+(direction>0 ? 1 : 0))*cell)
+        if(exposed(x,y,axis,direction,cs)){
+            side_axle_drill(axis,direction,coordinate,(tangent+0.5)*cell);
+            // The positive tangent direction counts each adjacent pair only once.
+            let(nx=x+(axis==1 ? 1 : 0),ny=y+(axis==0 ? 1 : 0))
+                if(included(nx,ny,cs) && exposed(nx,ny,axis,direction,cs))
+                    side_axle_drill(axis,direction,coordinate,(tangent+1)*cell);
+        }
 }
 module z_axis_half_depth_openings(cs){
     // Continuous aperture; explicit +/-Z face-local half-cell depth.
@@ -132,8 +141,7 @@ module piece(cs){
   difference(){
     rounded_outer_solid(cs);
     z_axis_half_depth_openings(cs);
-    x_axis_local_drills(cs);
-    y_axis_local_drills(cs);
+    side_axle_drills(cs);
   }
 }
 assert(piece_id>=0 && piece_id<len(all_cells));
