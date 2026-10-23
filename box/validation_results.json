@@ -1,29 +1,29 @@
 {
-  "parts": {
+  "assemblies": {
     "A": {
       "watertight": true,
-      "components": 1,
-      "volume_cm3": 199.15378354583808,
-      "solid_PLA_g_at_1_24": 246.95069159683922,
+      "components": 2,
+      "height_mm": 23.400001525878906,
+      "volume_cm3": 197.47174529608097,
       "bounds_mm": [
         [
-          -4.0,
-          -6.0,
+          -4.995183944702148,
+          -14.0,
           0.0
         ],
         [
-          196.0,
-          152.0,
-          40.0
+          196.99517822265625,
+          164.8000030517578,
+          23.400001525878906
         ]
       ],
-      "triangles": 420
+      "sha256": "e15274ea409b2f4d3f4ce36c557f57dc225a7e97b65e3eb68c1fc82f2602b4d0"
     },
     "B": {
       "watertight": true,
-      "components": 1,
-      "volume_cm3": 194.6265223977084,
-      "solid_PLA_g_at_1_24": 241.33688777315842,
+      "components": 2,
+      "height_mm": 23.400001525878906,
+      "volume_cm3": 194.75180574705448,
       "bounds_mm": [
         [
           -4.0,
@@ -32,97 +32,77 @@
         ],
         [
           196.0,
-          152.0,
-          40.0
+          164.8000030517578,
+          23.400001525878906
         ]
       ],
-      "triangles": 876
+      "sha256": "d7d7be66374e5402b01b32be86079416aa7f0f31779c45d2164f00a42fee83ae"
     }
   },
-  "assemblies": [
-    {
-      "mode": "board",
-      "lift_mm": 0,
-      "section_count": 26,
-      "overlaps": [],
-      "bounds_mm": [
-        [
-          -4.0,
-          -152.0,
-          0.0
-        ],
-        [
-          196.0,
-          152.0,
-          40.0
-        ]
-      ]
+  "static": {
+    "box": {
+      "sections": 458,
+      "hits": []
     },
-    {
-      "mode": "box",
-      "lift_mm": 0,
-      "section_count": 26,
-      "overlaps": [],
-      "bounds_mm": [
-        [
-          -4.0,
-          -8.0,
-          0.0
-        ],
-        [
-          196.0,
-          152.0,
-          40.0
-        ]
-      ]
+    "board": {
+      "sections": 440,
+      "hits": []
     }
-  ],
-  "total_volume_cm3": 393.7803059435465,
-  "total_solid_PLA_g": 488.2875793699976,
-  "exact_cgal_intersections": {
-    "board": "empty",
-    "box": "zero-volume contact surfaces at Z=20 mm only; wall hard stops"
   },
-  "packing": {
-    "pieces": 37,
-    "occupied_cells": 216,
-    "dims": [
-      12,
-      9,
-      2
+  "folding": {
+    "A": {
+      "angles": 183,
+      "sections_per_angle": 193,
+      "hits": []
+    },
+    "B": {
+      "angles": 183,
+      "sections_per_angle": 193,
+      "hits": []
+    }
+  },
+  "source_sha256": "2ab51b758c2e845d10df02ce484e257707b0a3621e933757c051a8405401a044",
+  "stacking": {
+    "lift_positions": 61,
+    "sections_per_position": 439,
+    "collisions": 0
+  },
+  "board_joining": {
+    "sliding_positions": 49,
+    "clip_release_positions": 13,
+    "sections_per_position": 140,
+    "collisions": 0
+  },
+  "storage_envelope_mm": [
+    192,
+    144,
+    32
+  ],
+  "vertical_insertion": {
+    "clear_rectangle_mm": [
+      192,
+      288
     ],
-    "layers": [
-      {
-        "z": 0,
-        "pieces": 19,
-        "cells": 108
-      },
-      {
-        "z": 1,
-        "pieces": 18,
-        "cells": 108
-      }
-    ],
-    "all_print_STL_bounds_inside_cavity": true,
-    "occupied_bounds_mm": [
+    "above_deck_mm": 0.001,
+    "obstructions": 0
+  },
+  "coupon": {
+    "watertight": true,
+    "components": 2,
+    "bounds_mm": [
       [
-        0.10000038146972656,
-        0.10000038146972656,
-        4.100000381469727
+        -4.0,
+        128.0,
+        0.0
       ],
       [
-        191.9000015258789,
-        143.89999961853027,
-        35.89999961853027
+        60.0,
+        164.8000030517578,
+        23.400001525878906
       ]
-    ]
+    ],
+    "sha256": "8e97a8c0b00b056872ae594b39fd7eea0a7a1899375e6532b32082d67a2b2541"
   },
-  "limits": "Geometric checks only. Snap deflection during insertion is intentional; snap force, fatigue, printing fit and loaded carrying strength require physical prototype tests.",
-  "date": "2026-10-23",
-  "sha256": {
-    "hexomino_box_v1.scad": "c99130f20d632b8719bcb7d9b22d2fa41f38be47cf75291e177fc073558b30d0",
-    "STL/Tray_A.stl": "e4599d831924494a7e04ef991bb67db48b31c2526d9e16da34a3bd733d009f36",
-    "STL/Tray_B.stl": "decda8558c627ab58fb09c62bec0534530e16b53e5c77692d9f420ae0f0b75c9",
-    "packing_12x9x2.json": "334be3c64415f3f616b1f22175429007dd5a089d98b89bc38e7bf258c228b9b4"
-  }
+  "limits": "Nominal rigid-body samples. End-wall catches use an approximate 1 mm Y deflection below 55 degrees; board clips use an approximate 1.2 mm X translation. No elastic stress, slicing, fatigue or load verification.",
+  "numerical_tolerance_mm2": 0.001
 }
