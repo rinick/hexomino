@@ -1,9 +1,9 @@
-/* HEXOMINO BOX V1-F, 2026-10-23. Based on the original two shallow trays.
-   Two print-in-place assemblies; each contains a tray and a captive folding wall.
-   Default STL pose: wall folded OUT, angle=180; no metal pins or extra assembly.
-   Board: side lap joints and releasable clips. Box: upright end-wall lips retain
-   the opposite floor; end-wall spring catches lock the walls upright.
-   Prototype: test the hinge coupon before printing the full assemblies.
+/* HEXOMINO BOX V1-S, 2026-10-23.
+   A has one fixed high end wall; B has one print-in-place folding end wall.
+   Board: side clips retain, three rectangular tongues locate the floors.
+   Box: B's end tongues engage A's fixed-wall slots; B's folding-wall lips retain
+   A's underside. Light upper clips prevent sliding. Slide B out 6.4 mm to open.
+   Fold B only after removal. Test the hinge and fit coupons before full prints.
 */
 cell=16;
 width=192;
@@ -14,13 +14,15 @@ end=8;
 wall_top=20;
 box_height=40;
 fit=0.20;
-pip_gap=0.40;
+case_slide=6.4;
 hinge_y=152.4;
 hinge_z=20;
 hinge_centers=[40,96,152];
 lip_centers=[52,140];
+key_centers=[24,96,168];
+case_key_centers=[8,184];
 eps=0.02;
-part="A";              // "A", "B", "coupon"
+part="A";              // "A", "B", "coupon", "fit_coupon"
 component="all";       // "all", "fixed", "flap" (the latter two are for inspection)
 view="part";           // "part", "board", "box", "exploded", "folding"
 fold_angle=180;         // 0=upright, 180=folded outside the board
@@ -29,6 +31,7 @@ assert(cell==16 && width==192 && length==144 && base==4);
 
 module board_transform(){translate([width,0,0]) rotate([0,0,180]) children();}
 module box_transform(lift=0){translate([0,length,box_height+lift]) rotate([180,0,0]) children();}
+module case_clip_transform(){translate([0,length,box_height]) mirror([0,0,1]) children();}
 module fold(angle){
     translate([0,hinge_y,hinge_z]) rotate([-angle,0,0])
         translate([0,-hinge_y,-hinge_z]) children();
@@ -47,14 +50,35 @@ module rim_tongues(){
         translate([x,span[0],wall_top-eps]) cube([1.4,span[1]-span[0],1.5+eps]);
 }
 module rim_grooves(){
-    for(x=[-2.7-fit,width+1.3-fit]) for(span=[[8,44],[84,120]])
+    for(x=[-2.7-fit,width+1.3-fit]) for(span=[[8-case_slide,44],[84-case_slide,120]])
         translate([x,span[0]-fit,wall_top-1.5-fit])
             cube([1.4+2*fit,span[1]-span[0]+2*fit,1.5+fit+eps]);
 }
-module body(){
+module body(which){
     translate([-side,0.1,0]) cube([width+2*side,151.9,base]);
     for(x=[-side,width]) translate([x,0.1,base-eps]) cube([side,151.9,16+eps]);
-    translate([-side,length,0]) cube([width+2*side,end,wall_top]);
+    translate([-side,length,0]) cube([width+2*side,end,which=="A"?box_height:wall_top]);
+    if(which=="A") both_sides() translate([-side,152-eps,wall_top])
+        cube([side,3.6+eps,20]);
+}
+module alignment_tongues(){
+    for(c=key_centers) hull(){
+        translate([c-5.7,-6,1.5]) cube([11.4,0.05,1]);
+        translate([c-6,-5.6,1.2]) cube([12,5.9,1.6]);
+    }
+}
+module alignment_sockets(){
+    // Side-opening blind slots leave 1 mm skins above and below.
+    for(c=key_centers) translate([c-6-fit,-eps,1]) cube([12+2*fit,6.2+eps,2]);
+}
+module case_tongues(){
+    for(c=case_key_centers) hull(){
+        translate([c-5.7,-4,1.9]) cube([11.4,0.05,0.6]);
+        translate([c-6,-3.6,1.6]) cube([12,3.9,1.2]);
+    }
+}
+module case_key_sockets(){
+    for(c=case_key_centers) translate([c-6-fit,-eps,1.4]) cube([12+2*fit,4.2+eps,1.6]);
 }
 module lip_pockets(){
     // Blind pockets open on the underside; the board deck remains continuous.
@@ -86,14 +110,26 @@ module hinge_clearance_in_body(){
     for(c=hinge_centers) x_cylinder(c-5,10,3.8);
 }
 module board_arm_reliefs(){
-    both_sides() translate([-4-eps,0.08,-eps]) cube([2.8+eps,10.32,20.1+eps]);
+    both_sides() translate([-4-eps,-eps,-eps]) cube([2.8+eps,10.4+eps,20.1+eps]);
 }
-module board_arms(){
+module case_arm_reliefs(){
+    both_sides() translate([-4-eps,144-eps,20-eps]) cube([2.8+eps,10.4+eps,12.02]);
+}
+module case_arms(){
+    case_clip_transform() intersection(){
+        board_arms(true,-1.2);
+        translate([-6,-15,8.8]) cube([204,27,5.6]);
+    }
+}
+module hook_outline(tip=-0.8){polygon([[-2.2,-14],[tip,-11],[tip,-9],[-2.2,-9]]);}
+module board_arms(vertical_lead=false,hook_tip=-0.8){
     both_sides(){
         translate([-4,-14,0]) cube([1.8,25,20]);
         // A sloping nose cams the two exterior clips during planar joining.
-        translate([0,0,10]) linear_extrude(height=4)
-            polygon([[-2.2,-14],[-0.8,-11],[-0.8,-9],[-2.2,-9]]);
+        if(vertical_lead) hull(){
+            translate([-2.2,-13.95,10]) cube([0.02,4.95,eps]);
+            translate([0,0,11.2]) linear_extrude(height=2.8) hook_outline(hook_tip);
+        }else translate([0,0,10]) linear_extrude(height=4) hook_outline(hook_tip);
         translate([-4,-10.5,10]) scale([1.0,2.2,3]) sphere(r=1,$fn=32);
     }
 }
@@ -107,13 +143,25 @@ module board_receivers(){
 module fixed_tray(which){
     union(){
         difference(){
-            body();lip_pockets();wall_latch_pockets();hinge_clearance_in_body();
-            if(which=="A") board_arm_reliefs();
-            if(which=="B"){board_receivers();rim_grooves();}
+            body(which);
+            if(which=="A"){
+                lip_pockets();board_arm_reliefs();case_key_sockets();
+                case_arm_reliefs();
+                // Closed-case keys enter slots in the fixed wall, outside the play area.
+                box_transform() board_transform() case_key_sockets();
+            }else{
+                wall_latch_pockets();hinge_clearance_in_body();
+                board_receivers();rim_grooves();alignment_sockets();
+            }
         }
-        fixed_hinges();
-        both_ends() translate([-fit,148.2,20-eps]) cube([4+2*fit,1,1.2+eps]);
-        if(which=="A"){rim_tongues();board_arms();}
+        if(which=="A"){
+            rim_tongues();board_arms();alignment_tongues();
+            case_arms();
+        }else{
+            fixed_hinges();
+            case_tongues();
+            both_ends() translate([-fit,148.2,20-eps]) cube([4+2*fit,1,1.2+eps]);
+        }
     }
 }
 module flap_hinge_clearance(){
@@ -153,11 +201,13 @@ module upright_flap(){
             for(c=lip_centers) translate([c-20,140,38]) cube([40,4.1,2]);
         }
         rotating_bores();
+        // These pockets clear A's floor tongues while the lid slides out.
+        box_transform() board_transform() alignment_sockets();
     }
 }
 module tray(which,angle=180){
     if(component!="flap") fixed_tray(which);
-    if(component!="fixed") fold(angle) upright_flap();
+    if(which=="B" && component!="fixed") fold(angle) upright_flap();
 }
 module show_a(angle=180){color("#3d9aab") tray("A",angle);}
 module show_b(angle=180){color("#e8ac60") tray("B",angle);}
@@ -168,11 +218,17 @@ if(view=="board"){
 }else if(view=="exploded"){
     show_a();box_transform(50) show_b();
 }else if(view=="folding"){
-    show_a(fold_angle);
+    show_b(fold_angle);
 }else{
-    assert(view=="part" && (part=="A" || part=="B" || part=="coupon"));
+    assert(view=="part" && (part=="A" || part=="B" || part=="coupon" || part=="fit_coupon"));
     if(part=="coupon") intersection(){
-        tray("A",fold_angle);
+        tray("B",fold_angle);
         translate([-4,128,-eps]) cube([64,42,24]);
+    }else if(part=="fit_coupon"){
+        intersection(){tray("A");translate([0.2,-7,-eps]) cube([31.8,19,4+2*eps]);}
+        translate([0,-10,0]) intersection(){
+            board_transform() tray("B");
+            translate([0.2,-12,-eps]) cube([31.8,16.1,4+2*eps]);
+        }
     }else tray(part,fold_angle);
 }
