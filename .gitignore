@@ -3,6 +3,8 @@ node_modules/
 dist/
 coverage/
 .cache/
+__pycache__/
+*.py[cod]
 
 # Local logs and temporary files
 *.log
