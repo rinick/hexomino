@@ -1,5 +1,4 @@
 """Validate the single-folding-wall box. Requires numpy, trimesh, shapely, scipy."""
-"""Validate the folding box STL files. Requires numpy, trimesh, shapely, scipy."""
 import json,hashlib
 from pathlib import Path
 import numpy as np
@@ -53,6 +52,27 @@ for name,m in [('A',a),('B',bb)]:
  upper=trimesh.intersections.slice_mesh_plane(m,[0,0,1],[0,0,4.001],cap=False)
  assert all(Polygon(tri[:,:2]).intersection(field).area<1e-6 for tri in upper.triangles)
 print('Vertical insertion corridor clear.',flush=True)
+# Measure the printed half-laps and verify that both directions have a hard stop.
+sa=section(a,-2).intersection(box(.001,-.001,191.999,4.001))
+sb=section(bb,-2).intersection(box(.001,-.001,191.999,4.001))
+keys=sorted(sa.geoms,key=lambda p:p.centroid.x)
+assert len(keys)==4,'Expected four A alignment tongues'
+measured=[]
+for key in keys:
+ x0,z0,x1,z1=key.bounds
+ upper=np.isclose(z1,4)
+ ledge=sb.intersection(box(x0,-.001,x1,4.001))
+ gap=z0-ledge.bounds[3] if upper else ledge.bounds[1]-z1
+ assert np.allclose([x1-x0,z1-z0,ledge.bounds[3]-ledge.bounds[1],gap],[12,2.1,1.7,.2],atol=1e-4)
+ measured.append({'center_x_mm':key.centroid.x,'upper':bool(upper),'tongue_mm':z1-z0,'ledge_mm':ledge.bounds[3]-ledge.bounds[1],'gap_mm':gap})
+assert sum(row['upper'] for row in measured)==2
+stops={}
+for direction,travel in [('up',.25),('down',-.25)]:
+ contact=sa.intersection(affine_transform(sb,[1,0,0,1,0,travel]))
+ assert contact.area>.1,'Missing board vertical stop'
+ stops[direction+'_contact_area_mm2']=contact.area
+report['board_half_laps']={'section_y_mm':-2,'tongues':measured,'attempted_displacement_mm':.25,**stops}
+print('Four half-laps: 2.1 mm tongues, 1.7 mm ledges, bidirectional stops.',flush=True)
 def released_flap(m):
  n=m.copy();v=n.vertices;factor=np.maximum(np.clip((26-v[:,0])/22,0,1),np.clip((v[:,0]-166)/22,0,1))
  mask=((v[:,1]>=149.3)&(v[:,2]>=21.99)&(v[:,2]<=26.01)) | ((v[:,1]>=148.5)&(v[:,2]>=18.19)&(v[:,2]<=24.01)&((v[:,0]<4.01)|(v[:,0]>187.99)))
@@ -107,7 +127,7 @@ for travel in np.linspace(0,.8,9):
   assert sa.intersection(sb).area<1e-3,'Case clip release interference'
 report['case_sliding']={'positions':len(shifts),'release_positions':9,'sections_per_position':len(zs),'collisions':0}
 print('Case lowering, sliding and clip release clear.',flush=True)
-# Side clips retain the puzzle board; rectangular keys align both floor skins.
+# Side clips retain the puzzle board; alternating half-laps align the floors.
 zs=slices(a,bb,axis=2);secs=[(section(a,z,2),section(bb,z,2)) for z in zs]
 left=box(-6,-15,0,10.4);right=box(192,-15,198,10.4)
 for shift in np.arange(-24,.001,.5):

@@ -1,6 +1,6 @@
 /* HEXOMINO BOX V1-S, 2026-10-23.
    A has one fixed high end wall; B has one print-in-place folding end wall.
-   Board: side clips retain, three rectangular tongues locate the floors.
+   Board: side clips retain; four alternating half-lap tongues locate the floors.
    Box: B's end tongues engage A's fixed-wall slots; B's folding-wall lips retain
    A's underside. Light upper clips prevent sliding. Slide B out 6.4 mm to open.
    Fold B only after removal. Test the hinge and fit coupons before full prints.
@@ -19,8 +19,10 @@ hinge_y=152.4;
 hinge_z=20;
 hinge_centers=[40,96,152];
 lip_centers=[52,140];
-key_centers=[24,96,168];
+key_layout=[[24,true],[80,false],[112,false],[168,true]]; // center, upper half
 case_key_centers=[8,184];
+key_length=4;
+key_thickness=2.1;
 eps=0.02;
 part="A";              // "A", "B", "coupon", "fit_coupon"
 component="all";       // "all", "fixed", "flap" (the latter two are for inspection)
@@ -28,6 +30,7 @@ view="part";           // "part", "board", "box", "exploded", "folding"
 fold_angle=180;         // 0=upright, 180=folded outside the board
 $fn=64;
 assert(cell==16 && width==192 && length==144 && base==4);
+assert(key_thickness+fit<base);
 
 module board_transform(){translate([width,0,0]) rotate([0,0,180]) children();}
 module box_transform(lift=0){translate([0,length,box_height+lift]) rotate([180,0,0]) children();}
@@ -61,24 +64,32 @@ module body(which){
     if(which=="A") both_sides() translate([-side,152-eps,wall_top])
         cube([side,3.6+eps,20]);
 }
-module alignment_tongues(){
-    for(c=key_centers) hull(){
-        translate([c-5.7,-6,1.5]) cube([11.4,0.05,1]);
-        translate([c-6,-5.6,1.2]) cube([12,5.9,1.6]);
+module lap_tongue(c,upper=true){
+    z=upper?base-key_thickness:0;
+    // Chamfer the plan-view nose; the top and bottom remain flush with the floor.
+    hull(){
+        translate([c-5.7,-key_length,z]) cube([11.4,0.05,key_thickness]);
+        translate([c-6,-key_length+0.4,z]) cube([12,key_length-0.1,key_thickness]);
     }
+}
+module lap_socket(c,upper=true){
+    // Open on one face: 2.1 mm tongue + 0.2 mm gap + 1.7 mm ledge = 4 mm.
+    z=upper?base-key_thickness-fit:-eps;
+    translate([c-6-fit,-eps,z])
+        cube([12+2*fit,key_length+fit+eps,key_thickness+fit+eps]);
+}
+module alignment_tongues(){
+    for(key=key_layout) lap_tongue(key[0],key[1]);
 }
 module alignment_sockets(){
-    // Side-opening blind slots leave 1 mm skins above and below.
-    for(c=key_centers) translate([c-6-fit,-eps,1]) cube([12+2*fit,6.2+eps,2]);
+    for(key=key_layout) lap_socket(width-key[0],key[1]);
 }
 module case_tongues(){
-    for(c=case_key_centers) hull(){
-        translate([c-5.7,-4,1.9]) cube([11.4,0.05,0.6]);
-        translate([c-6,-3.6,1.6]) cube([12,3.9,1.2]);
-    }
+    // After the lid flips, these upper-face tongues sit below A's wall ledges.
+    for(c=case_key_centers) lap_tongue(c);
 }
 module case_key_sockets(){
-    for(c=case_key_centers) translate([c-6-fit,-eps,1.4]) cube([12+2*fit,4.2+eps,1.6]);
+    for(c=case_key_centers) lap_socket(width-c);
 }
 module lip_pockets(){
     // Blind pockets open on the underside; the board deck remains continuous.
@@ -225,10 +236,10 @@ if(view=="board"){
         tray("B",fold_angle);
         translate([-4,128,-eps]) cube([64,42,24]);
     }else if(part=="fit_coupon"){
-        intersection(){tray("A");translate([0.2,-7,-eps]) cube([31.8,19,4+2*eps]);}
+        intersection(){tray("A");translate([0.2,-5,-eps]) cube([87.8,17,4+2*eps]);}
         translate([0,-10,0]) intersection(){
             board_transform() tray("B");
-            translate([0.2,-12,-eps]) cube([31.8,16.1,4+2*eps]);
+            translate([0.2,-12,-eps]) cube([87.8,16.1,4+2*eps]);
         }
     }else tray(part,fold_angle);
 }

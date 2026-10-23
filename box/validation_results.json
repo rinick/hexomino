@@ -3,7 +3,7 @@
     "A": {
       "watertight": true,
       "components": 1,
-      "volume_cm3": 198.21364877226503,
+      "volume_cm3": 198.13314162387766,
       "bounds_mm": [
         [
           -4.995183944702148,
@@ -16,12 +16,12 @@
           40.0
         ]
       ],
-      "sha256": "0a843124307c40c7a9ef13e3bb06e1b154ec99a59ef364ec8a29692f55ef5a1d"
+      "sha256": "52b3635c41754bd8f3f4fa687ba9dcc7678f8c160c136ffd800bedf9ae47c7f0"
     },
     "B": {
       "watertight": true,
       "components": 2,
-      "volume_cm3": 194.62611023274928,
+      "volume_cm3": 194.6834114110923,
       "bounds_mm": [
         [
           -4.0,
@@ -34,12 +34,12 @@
           23.400001525878906
         ]
       ],
-      "sha256": "9697407ccdbc0d1af475f727b4a994b68994e6c9307be17869d59a104942218a"
+      "sha256": "15a18fdfd2498f5be1e3fca39d81750f155ca02bec8eb5acd96df8cab521ac34"
     }
   },
   "static": {
     "box": {
-      "sections": 478,
+      "sections": 477,
       "hits": []
     },
     "board": {
@@ -50,12 +50,48 @@
   "folding": {
     "B": {
       "angles": 183,
-      "sections_per_angle": 65,
+      "sections_per_angle": 67,
       "hits": [],
       "pose": "lid removed"
     }
   },
-  "source_sha256": "14b8629b6f942893ed9bf2f4abb0b925d2f045cb6958de206fa7a4b0c3c7b43f",
+  "source_sha256": "8485644d97525067d92e6758a3f431bcc434bc013852d338b685b07f376f8da4",
+  "board_half_laps": {
+    "section_y_mm": -2,
+    "tongues": [
+      {
+        "center_x_mm": 24.0,
+        "upper": true,
+        "tongue_mm": 2.1000003814697266,
+        "ledge_mm": 1.6999998092651367,
+        "gap_mm": 0.19999980926513672
+      },
+      {
+        "center_x_mm": 80.0,
+        "upper": false,
+        "tongue_mm": 2.09999942779541,
+        "ledge_mm": 1.7000007629394531,
+        "gap_mm": 0.19999980926513672
+      },
+      {
+        "center_x_mm": 111.99999999999999,
+        "upper": false,
+        "tongue_mm": 2.09999942779541,
+        "ledge_mm": 1.7000007629394531,
+        "gap_mm": 0.19999980926513672
+      },
+      {
+        "center_x_mm": 168.00000000000003,
+        "upper": true,
+        "tongue_mm": 2.1000003814697266,
+        "ledge_mm": 1.6999998092651367,
+        "gap_mm": 0.19999980926513672
+      }
+    ],
+    "attempted_displacement_mm": 0.25,
+    "up_contact_area_mm2": 1.2000045776367188,
+    "down_contact_area_mm2": 1.2000045776367188
+  },
   "case_lowering": {
     "positions": 61,
     "sections_per_position": 477,
@@ -65,13 +101,13 @@
   "case_sliding": {
     "positions": 33,
     "release_positions": 9,
-    "sections_per_position": 186,
+    "sections_per_position": 181,
     "collisions": 0
   },
   "board_joining": {
     "sliding_positions": 49,
     "release_positions": 13,
-    "sections_per_position": 169,
+    "sections_per_position": 165,
     "collisions": 0
   },
   "storage_envelope_mm": [
@@ -90,7 +126,7 @@
   "vertical_stop": {
     "attempted_lift_mm": 0.25,
     "section_y_mm": 146,
-    "contact_area_mm2": 1.2000503540039062
+    "contact_area_mm2": 1.2000274658203125
   },
   "Hinge_Test": {
     "watertight": true,
@@ -107,7 +143,7 @@
         23.400001525878906
       ]
     ],
-    "sha256": "443781090e0626e685245629637f10f2406202c2f615d4ce957e6e861c740482"
+    "sha256": "d985c6aca0b3df61602b1ad23ba52527c192ea9bb80994ac572201ba76e43f3e"
   },
   "Fit_Test": {
     "watertight": true,
@@ -119,12 +155,12 @@
         0.0
       ],
       [
-        32.0,
+        88.0,
         12.0,
         4.0
       ]
     ],
-    "sha256": "b345110983fffdc78974558f95ffab251c5b3e3a64c144e95a0422c4cd358e7b"
+    "sha256": "a3136965a10ac18a3d0474ac067cc1b8e33f771bb2d65621e2dcdbf47df84607"
   },
   "limits": "Nominal rigid-body samples. Flap catches use a 1 mm tip deflection below 55 degrees; case clips and board clips use approximate translations of 0.8 and 1.2 mm. No elastic stress, slicing, fatigue or loaded strength verification.",
   "numerical_tolerance_mm2": 0.001
