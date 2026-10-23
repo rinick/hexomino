@@ -2,7 +2,27 @@
   "generator": "OpenSCAD 2026.10.18 / CGAL, binary STL",
   "cell_mm": 16.0,
   "lego_pitch_mm": 8,
-  "side_hole_type": "technic_axle_cross",
+  "side_hole_type": "center_axle_cross_and_between_cell_counterbored_pin",
+  "middle_wall_mm": 3.8,
+  "middle_wall_nominal_mm": 4,
+  "middle_z_range_mm": [
+    4.1,
+    11.9
+  ],
+  "pin_nominal_diameter_mm": 4.8,
+  "pin_nominal_recess_diameter_mm": 6.4,
+  "pin_clearance_per_wall_mm": 0.1,
+  "pin_hole_diameter_mm": 5.0,
+  "pin_recess_diameter_mm": 6.6,
+  "pin_recess_depth_mm": 0.8,
+  "pin_wall_thickness_mm": 3.8,
+  "nominal_design_reference": "V6 sqrt(2)/2, 2026-10-19",
+  "assembly_clearance_per_face_mm": 0.1,
+  "cavity_clearance_per_face_mm": 0.1,
+  "nominal_cell_outer_span_mm": 16.0,
+  "cell_outer_span_mm": 15.8,
+  "middle_cavity_channel_width_mm": 8.2,
+  "nominal_grid_and_hole_centers_preserved": true,
   "axle_nominal_span_mm": 4.8,
   "axle_nominal_arm_mm": 1.8,
   "axle_clearance_per_wall_mm": 0.1,
@@ -10,28 +30,39 @@
   "axle_hole_arm_mm": 2.0,
   "side_hole_pitch_mm": 8.0,
   "physical_fit_tested": false,
-  "front_fillet_diameter_ratio": "3/5",
-  "front_opening_width_mm": 9.6,
-  "front_fillet_diameter_mm": 9.6,
-  "front_frame_mm": 3.2,
+  "front_fillet_diameter_ratio": "sqrt(2)/2",
+  "front_opening_width_mm": 11.51370849898476,
+  "front_opening_nominal_width_mm": 11.313708498984761,
+  "front_fillet_diameter_mm": 11.51370849898476,
+  "front_frame_mm": 2.1431457505076192,
+  "front_frame_nominal_mm": 2.3431457505076194,
   "model_variant": "print",
   "external_radius_ratio": "1/20",
   "external_radius_mm": 0.8,
-  "front_flat_land_mm": 2.4,
-  "external_envelope_preserved": true,
-  "clearance_mm": 0,
-  "cut_depth_mm": 8.0,
+  "front_flat_land_mm": 1.3431457505076192,
+  "external_envelope_inset_mm": 0.1,
+  "clearance_mm": 0.1,
+  "cut_depth_mm": 7.9,
   "facets": 64,
   "dimension_tolerance_mm": 0.0001,
   "axle_profile_area_tolerance_mm2": 0.001,
   "piece_count": 37,
   "center_axle_holes_checked": 488,
-  "between_cell_axle_holes_checked": 172,
-  "total_axle_holes_checked": 660,
+  "between_cell_pin_holes_checked": 172,
+  "pin_profile_depth_checks": 1204,
+  "nominal_8mm_footprints_checked": 216,
+  "middle_right_angle_corners_checked": 316,
+  "middle_inset_max_area_error_mm2": 0.00023880004458989108,
+  "upper_lower_quarters_use_enlarged_aperture": true,
+  "middle_fill_matches_minimum_wall": true,
+  "middle_cavity_inset_mm": 3.9,
+  "middle_cavity_uses_square_clearance": true,
+  "total_axle_holes_checked": 488,
+  "total_connector_holes_checked": 660,
   "watertight_count": 37,
-  "total_volume_cm3": 358.200115,
-  "pla_mass_g_at_1_24": 444.168142,
-  "petg_mass_g_at_1_27": 454.914146,
+  "total_volume_cm3": 307.015548,
+  "pla_mass_g_at_1_24": 380.699279,
+  "petg_mass_g_at_1_27": 389.909746,
   "pieces": [
     {
       "name": "H01_L",
@@ -39,41 +70,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 7976,
-      "volume_mm3": 10040.708355,
+      "triangles": 12784,
+      "volume_mm3": 8455.802017,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 5,
       "external_spherical_corners_checked": 10,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317307858287,
-      "external_max_radius_error_mm": 3.190371509975698e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549784736,
+      "external_max_radius_error_mm": 3.35199281142895e-06,
       "front_fillet_arcs_checked": 5,
-      "front_fillet_max_radius_error_mm": 1.9966254116710047e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 8,
-      "axle_holes_checked": 22,
+      "between_cell_pin_holes_checked": 8,
+      "pin_profile_depth_checks": 56,
+      "pin_profile_max_area_error_mm2": 1.2846419135731565e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 6,
+      "middle_inset_max_area_error_mm2": 0.00010757446085057839,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 6,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.3714709869437545e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -82,41 +130,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8372,
-      "volume_mm3": 10214.611343,
+      "triangles": 12072,
+      "volume_mm3": 8706.482429,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966009122122e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549647069,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.954554946477117e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 6,
-      "axle_holes_checked": 20,
+      "between_cell_pin_holes_checked": 6,
+      "pin_profile_depth_checks": 42,
+      "pin_profile_max_area_error_mm2": 1.2846419134932943e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.00023880004458989108,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986799544e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -125,41 +190,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 9176,
-      "volume_mm3": 10562.413209,
+      "triangles": 10672,
+      "volume_mm3": 9207.841784,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 8,
       "external_spherical_corners_checked": 16,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966009122122e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549647069,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 8,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.545854417057569e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 2,
-      "axle_holes_checked": 16,
+      "between_cell_pin_holes_checked": 2,
+      "pin_profile_depth_checks": 14,
+      "pin_profile_max_area_error_mm2": 1.2846419135004466e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 12,
+      "middle_inset_max_area_error_mm2": 0.00020523070813727921,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 12,
-      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986799544e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -168,41 +250,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 6016,
-      "volume_mm3": 7002.876787,
+      "triangles": 9632,
+      "volume_mm3": 5854.311531,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          48.0,
-          32.0,
-          15.999999
+          47.899998,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        48.0,
-        32.0,
-        15.999999
+        47.799997,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 4,
       "external_spherical_corners_checked": 8,
       "external_horizontal_arcs_checked": 20,
-      "external_horizontal_section_max_radius_error_mm": 0.0009649423275525093,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549711462,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 4,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 10,
-      "between_cell_axle_holes_checked": 6,
-      "axle_holes_checked": 16,
+      "between_cell_pin_holes_checked": 6,
+      "pin_profile_depth_checks": 42,
+      "pin_profile_max_area_error_mm2": 1.2660036289774761e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 4,
+      "middle_inset_max_area_error_mm2": 0.00012283324868671004,
+      "axle_holes_checked": 10,
       "coplanar_runs_checked": 4,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986754861e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -211,41 +310,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 7592,
-      "volume_mm3": 8782.644387,
+      "triangles": 10144,
+      "volume_mm3": 7531.076437,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          48.0,
-          48.0,
-          15.999999
+          47.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        48.0,
-        48.0,
-        15.999999
+        47.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 24,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317307858287,
-      "external_max_radius_error_mm": 3.190371509975698e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549784736,
+      "external_max_radius_error_mm": 3.35199281142895e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 12,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 16,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.2660036289774761e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.0001228332486200439,
+      "axle_holes_checked": 12,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.3714709869437545e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -254,41 +370,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 7592,
-      "volume_mm3": 8782.644761,
+      "triangles": 10144,
+      "volume_mm3": 7531.0762,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          48.0,
-          48.0,
-          15.999999
+          47.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        48.0,
-        48.0,
-        15.999999
+        47.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 24,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 12,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 16,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.2660036289774761e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.00013809203652132723,
+      "axle_holes_checked": 12,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.3714709869437545e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -297,41 +430,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8376,
-      "volume_mm3": 10214.610022,
+      "triangles": 12080,
+      "volume_mm3": 8706.482048,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          48.0,
-          48.0,
-          15.999999
+          47.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        48.0,
-        48.0,
-        15.999999
+        47.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317307858287,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549784736,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.504996124308434e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 6,
-      "axle_holes_checked": 20,
+      "between_cell_pin_holes_checked": 6,
+      "pin_profile_depth_checks": 42,
+      "pin_profile_max_area_error_mm2": 1.2660036289774761e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.0001489639230514712,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.3714709869437545e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -340,41 +490,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8772,
-      "volume_mm3": 10388.511667,
+      "triangles": 11368,
+      "volume_mm3": 8957.161523,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          48.0,
-          48.0,
-          15.999999
+          47.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        48.0,
-        48.0,
-        15.999999
+        47.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 7,
       "external_spherical_corners_checked": 14,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317307858287,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549784736,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 7,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.954554946477117e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 18,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.2660036289774761e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 10,
+      "middle_inset_max_area_error_mm2": 0.00017166137214182122,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 10,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.3714709869437545e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -383,41 +550,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 7992,
-      "volume_mm3": 8956.546299,
+      "triangles": 9440,
+      "volume_mm3": 7781.755874,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          48.0,
-          48.0,
-          15.999999
+          47.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        48.0,
-        48.0,
-        15.999999
+        47.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 7,
       "external_spherical_corners_checked": 14,
       "external_horizontal_arcs_checked": 24,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 7,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 12,
-      "between_cell_axle_holes_checked": 2,
-      "axle_holes_checked": 14,
+      "between_cell_pin_holes_checked": 2,
+      "pin_profile_depth_checks": 14,
+      "pin_profile_max_area_error_mm2": 1.2397277367082791e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 10,
+      "middle_inset_max_area_error_mm2": 0.00015335082453466045,
+      "axle_holes_checked": 12,
       "coplanar_runs_checked": 10,
-      "axle_profile_max_area_error_mm2": 5.371473787840739e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986754861e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -426,41 +610,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 7596,
-      "volume_mm3": 8782.645098,
+      "triangles": 10152,
+      "volume_mm3": 7531.076582,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          48.0,
-          48.0,
-          15.999999
+          47.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        48.0,
-        48.0,
-        15.999999
+        47.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 24,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966009122122e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549647069,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.545854417057569e-06,
       "center_axle_holes_checked": 12,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 16,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.2660036288962675e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.00017166137255291558,
+      "axle_holes_checked": 12,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986799544e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -469,41 +670,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 9172,
-      "volume_mm3": 10562.413204,
+      "triangles": 10664,
+      "volume_mm3": 9207.841197,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          48.0,
-          48.0,
-          15.999999
+          47.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        48.0,
-        48.0,
-        15.999999
+        47.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 8,
       "external_spherical_corners_checked": 16,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 8,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.954554946477117e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 2,
-      "axle_holes_checked": 16,
+      "between_cell_pin_holes_checked": 2,
+      "pin_profile_depth_checks": 14,
+      "pin_profile_max_area_error_mm2": 1.2397277364831439e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 12,
+      "middle_inset_max_area_error_mm2": 0.0001869201600698393,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 12,
-      "axle_profile_max_area_error_mm2": 5.371473787840739e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986754861e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -512,41 +730,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 7196,
-      "volume_mm3": 8608.743256,
+      "triangles": 10856,
+      "volume_mm3": 7280.396594,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          32.0,
-          15.999999
+          63.899998,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        32.0,
-        15.999999
+        63.799997,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 5,
       "external_spherical_corners_checked": 10,
       "external_horizontal_arcs_checked": 24,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317307858287,
-      "external_max_radius_error_mm": 3.190371509975698e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549784736,
+      "external_max_radius_error_mm": 3.35199281142895e-06,
       "front_fillet_arcs_checked": 5,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 12,
-      "between_cell_axle_holes_checked": 6,
-      "axle_holes_checked": 18,
+      "between_cell_pin_holes_checked": 6,
+      "pin_profile_depth_checks": 42,
+      "pin_profile_max_area_error_mm2": 1.284641913569458e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 6,
+      "middle_inset_max_area_error_mm2": 0.00012283324873512558,
+      "axle_holes_checked": 12,
       "coplanar_runs_checked": 6,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.3714709869437545e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -555,41 +790,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8772,
-      "volume_mm3": 10388.511173,
+      "triangles": 11368,
+      "volume_mm3": 8957.161848,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          32.0,
-          15.999999
+          63.899998,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        32.0,
-        15.999999
+        63.799997,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 7,
       "external_spherical_corners_checked": 14,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317307858287,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549784736,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 7,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.504996124308434e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 18,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.284641913505143e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 10,
+      "middle_inset_max_area_error_mm2": 0.00014896392294267032,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 10,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.3714709869437545e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -598,41 +850,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8776,
-      "volume_mm3": 10388.51155,
+      "triangles": 11376,
+      "volume_mm3": 8957.161611,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          32.0,
-          15.999999
+          63.899998,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        32.0,
-        15.999999
+        63.799997,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 7,
       "external_spherical_corners_checked": 14,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 7,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.504996124308434e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 18,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.2846419135880854e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 10,
+      "middle_inset_max_area_error_mm2": 0.00016422271089255804,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 10,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986754861e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -641,41 +910,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8376,
-      "volume_mm3": 10214.610032,
+      "triangles": 12080,
+      "volume_mm3": 8706.482042,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          32.0,
-          15.999999
+          63.899998,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        32.0,
-        15.999999
+        63.799997,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009649423275690516,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549758091,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.504996124308434e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 6,
-      "axle_holes_checked": 20,
+      "between_cell_pin_holes_checked": 6,
+      "pin_profile_depth_checks": 42,
+      "pin_profile_max_area_error_mm2": 1.284641913505143e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.00014896392312558154,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.3714709869437545e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -684,41 +970,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 7592,
-      "volume_mm3": 8782.644559,
+      "triangles": 10144,
+      "volume_mm3": 7531.07635,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          32.0,
-          15.999999
+          63.899998,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        32.0,
-        15.999999
+        63.799997,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 24,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317307858287,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549784736,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 12,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 16,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.284641913505143e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.0001228332482740591,
+      "axle_holes_checked": 12,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.3714709869437545e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -727,41 +1030,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 7592,
-      "volume_mm3": 8782.644937,
+      "triangles": 10144,
+      "volume_mm3": 7531.076112,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          32.0,
-          15.999999
+          63.899998,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        32.0,
-        15.999999
+        63.799997,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 24,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 12,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 16,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.2846419135820356e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.00013809203609939288,
+      "axle_holes_checked": 12,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986754861e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -770,41 +1090,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8372,
-      "volume_mm3": 10214.610688,
+      "triangles": 12072,
+      "volume_mm3": 8706.481119,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 6,
-      "axle_holes_checked": 20,
+      "between_cell_pin_holes_checked": 6,
+      "pin_profile_depth_checks": 42,
+      "pin_profile_max_area_error_mm2": 1.284641913590742e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.0001533508266577236,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.3714709869437545e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -813,41 +1150,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8772,
-      "volume_mm3": 10388.512225,
+      "triangles": 11368,
+      "volume_mm3": 8957.160793,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 7,
       "external_spherical_corners_checked": 14,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 7,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 18,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.284641913590742e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 10,
+      "middle_inset_max_area_error_mm2": 0.00016860961418798482,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 10,
-      "axle_profile_max_area_error_mm2": 5.371473787840739e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986754861e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -856,41 +1210,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8776,
-      "volume_mm3": 10388.512125,
+      "triangles": 11376,
+      "volume_mm3": 8957.161889,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 7,
       "external_spherical_corners_checked": 14,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966009122122e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549711462,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 7,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.545854417057569e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 18,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.2846419135021475e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 10,
+      "middle_inset_max_area_error_mm2": 0.0002052307081356709,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 10,
-      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986799544e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -899,41 +1270,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8772,
-      "volume_mm3": 10388.512181,
+      "triangles": 11368,
+      "volume_mm3": 8957.16139,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 7,
       "external_spherical_corners_checked": 14,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966009122122e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 7,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.545854417057569e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 18,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.284641913590742e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 10,
+      "middle_inset_max_area_error_mm2": 0.0001869201624969459,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 10,
-      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986799544e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -942,41 +1330,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8776,
-      "volume_mm3": 10388.512096,
+      "triangles": 11376,
+      "volume_mm3": 8957.161942,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 7,
       "external_spherical_corners_checked": 14,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966009122122e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549647069,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 7,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.545854417057569e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 18,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.2846419135004466e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 10,
+      "middle_inset_max_area_error_mm2": 0.0002052307093573489,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 10,
-      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986799544e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -985,41 +1390,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8376,
-      "volume_mm3": 10214.611021,
+      "triangles": 12080,
+      "volume_mm3": 8706.481506,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966009122122e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549647069,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.545854417057569e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 6,
-      "axle_holes_checked": 20,
+      "between_cell_pin_holes_checked": 6,
+      "pin_profile_depth_checks": 42,
+      "pin_profile_max_area_error_mm2": 1.284641913590742e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.00018692016237982484,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986799544e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1028,41 +1450,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8772,
-      "volume_mm3": 10388.512225,
+      "triangles": 11368,
+      "volume_mm3": 8957.160793,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 7,
       "external_spherical_corners_checked": 14,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 7,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 18,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.284641913590742e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 10,
+      "middle_inset_max_area_error_mm2": 0.00016860961415899624,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 10,
-      "axle_profile_max_area_error_mm2": 5.371473787840739e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986754861e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1071,41 +1510,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8376,
-      "volume_mm3": 10214.611011,
+      "triangles": 12080,
+      "volume_mm3": 8706.482046,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966009122122e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549711462,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.545854417057569e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 6,
-      "axle_holes_checked": 20,
+      "between_cell_pin_holes_checked": 6,
+      "pin_profile_depth_checks": 42,
+      "pin_profile_max_area_error_mm2": 1.2846419135021475e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.0002052307092696714,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986799544e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1114,41 +1570,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 9172,
-      "volume_mm3": 10562.413294,
+      "triangles": 10664,
+      "volume_mm3": 9207.841233,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 8,
       "external_spherical_corners_checked": 16,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966009122122e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 8,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.545854417057569e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 2,
-      "axle_holes_checked": 16,
+      "between_cell_pin_holes_checked": 2,
+      "pin_profile_depth_checks": 14,
+      "pin_profile_max_area_error_mm2": 1.284641913590742e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 12,
+      "middle_inset_max_area_error_mm2": 0.00018692016127687622,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 12,
-      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986799544e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1157,41 +1630,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8772,
-      "volume_mm3": 10388.511759,
+      "triangles": 11368,
+      "volume_mm3": 8957.162159,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 7,
       "external_spherical_corners_checked": 14,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966009122122e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 7,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.545854417057569e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 18,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.2660036290023728e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 10,
+      "middle_inset_max_area_error_mm2": 0.00018997191834632828,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 10,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986799544e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1200,41 +1690,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 9168,
-      "volume_mm3": 10562.413712,
+      "triangles": 10656,
+      "volume_mm3": 9207.840398,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 8,
       "external_spherical_corners_checked": 16,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966008455988e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 8,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 2,
-      "axle_holes_checked": 16,
+      "between_cell_pin_holes_checked": 2,
+      "pin_profile_depth_checks": 14,
+      "pin_profile_max_area_error_mm2": 1.2846419135941126e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 12,
+      "middle_inset_max_area_error_mm2": 0.00018386840257373792,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 12,
-      "axle_profile_max_area_error_mm2": 5.371473787840739e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986754861e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1243,41 +1750,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 9168,
-      "volume_mm3": 10562.413668,
+      "triangles": 10656,
+      "volume_mm3": 9207.840996,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          64.0,
-          48.0,
-          15.999999
+          63.899998,
+          47.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        64.0,
-        48.0,
-        15.999999
+        63.799997,
+        47.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 8,
       "external_spherical_corners_checked": 16,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317308152496,
-      "external_max_radius_error_mm": 3.397966009122122e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549880216,
+      "external_max_radius_error_mm": 3.565209873546138e-06,
       "front_fillet_arcs_checked": 8,
-      "front_fillet_max_radius_error_mm": 2.1476637463990755e-06,
+      "front_fillet_max_radius_error_mm": 2.545854417057569e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 2,
-      "axle_holes_checked": 16,
+      "between_cell_pin_holes_checked": 2,
+      "pin_profile_depth_checks": 14,
+      "pin_profile_max_area_error_mm2": 1.2846419135941126e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 12,
+      "middle_inset_max_area_error_mm2": 0.0002021789507707937,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 12,
-      "axle_profile_max_area_error_mm2": 5.371473787975118e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986799544e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1286,41 +1810,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 7976,
-      "volume_mm3": 10040.708209,
+      "triangles": 12784,
+      "volume_mm3": 8455.802722,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          80.0,
-          32.0,
-          15.999999
+          79.900002,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        80.0,
-        32.0,
-        15.999999
+        79.800001,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 5,
       "external_spherical_corners_checked": 10,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009666130971129894,
-      "external_max_radius_error_mm": 4.452718328273875e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549758091,
+      "external_max_radius_error_mm": 4.543610458873637e-06,
       "front_fillet_arcs_checked": 5,
-      "front_fillet_max_radius_error_mm": 3.129172777782685e-06,
+      "front_fillet_max_radius_error_mm": 4.009314154451715e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 8,
-      "axle_holes_checked": 22,
+      "between_cell_pin_holes_checked": 8,
+      "pin_profile_depth_checks": 56,
+      "pin_profile_max_area_error_mm2": 1.53084258809877e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 6,
+      "middle_inset_max_area_error_mm2": 0.00010757446071988837,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 6,
-      "axle_profile_max_area_error_mm2": 5.37147098618439e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986943755e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1329,41 +1870,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8372,
-      "volume_mm3": 10214.60973,
+      "triangles": 12072,
+      "volume_mm3": 8706.482317,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          80.0,
-          32.0,
-          15.999999
+          79.900002,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        80.0,
-        32.0,
-        15.999999
+        79.800001,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009666130971129894,
-      "external_max_radius_error_mm": 4.452718328273875e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549906861,
+      "external_max_radius_error_mm": 4.543610458873637e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 3.129172777782685e-06,
+      "front_fillet_max_radius_error_mm": 4.009314154451715e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 6,
-      "axle_holes_checked": 20,
+      "between_cell_pin_holes_checked": 6,
+      "pin_profile_depth_checks": 42,
+      "pin_profile_max_area_error_mm2": 1.53084258809877e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.0001228332485333608,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371470986184391e-06,
+      "axle_profile_max_area_error_mm2": 5.3714709869437545e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1372,41 +1930,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8376,
-      "volume_mm3": 10214.610915,
+      "triangles": 12080,
+      "volume_mm3": 8706.481586,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          80.0,
-          32.0,
-          15.999999
+          79.900002,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        80.0,
-        32.0,
-        15.999999
+        79.800001,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009666130970485964,
-      "external_max_radius_error_mm": 4.8496938140907275e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655004229361941,
+      "external_max_radius_error_mm": 4.963557240444949e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 3.129172777782685e-06,
+      "front_fillet_max_radius_error_mm": 4.009314154451715e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 6,
-      "axle_holes_checked": 20,
+      "between_cell_pin_holes_checked": 6,
+      "pin_profile_depth_checks": 42,
+      "pin_profile_max_area_error_mm2": 1.5308425879836405e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.00016860961416753113,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.3714709859609574e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986754861e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1415,41 +1990,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8372,
-      "volume_mm3": 10214.609686,
+      "triangles": 12072,
+      "volume_mm3": 8706.482915,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          80.0,
-          32.0,
-          15.999999
+          79.900002,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        80.0,
-        32.0,
-        15.999999
+        79.800001,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009666130971129894,
-      "external_max_radius_error_mm": 4.452718328273875e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549647069,
+      "external_max_radius_error_mm": 4.543610458873637e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 3.129172777782685e-06,
+      "front_fillet_max_radius_error_mm": 4.009314154451715e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 6,
-      "axle_holes_checked": 20,
+      "between_cell_pin_holes_checked": 6,
+      "pin_profile_depth_checks": 42,
+      "pin_profile_max_area_error_mm2": 1.53084258809877e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.00014114379470182666,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.3714709861844894e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986943755e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1458,41 +2050,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 8376,
-      "volume_mm3": 10214.610468,
+      "triangles": 12080,
+      "volume_mm3": 8706.48243,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          80.0,
-          32.0,
-          15.999999
+          79.900002,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        80.0,
-        32.0,
-        15.999999
+        79.800001,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 6,
       "external_spherical_corners_checked": 12,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009666130970485964,
-      "external_max_radius_error_mm": 4.8496938140907275e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549647069,
+      "external_max_radius_error_mm": 4.963557240444949e-06,
       "front_fillet_arcs_checked": 6,
-      "front_fillet_max_radius_error_mm": 3.129172777782685e-06,
+      "front_fillet_max_radius_error_mm": 4.009314154451715e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 6,
-      "axle_holes_checked": 20,
+      "between_cell_pin_holes_checked": 6,
+      "pin_profile_depth_checks": 42,
+      "pin_profile_max_area_error_mm2": 1.530842587983686e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 8,
+      "middle_inset_max_area_error_mm2": 0.00017166137131133312,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 8,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986754861e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1501,41 +2110,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 7576,
-      "volume_mm3": 9866.806869,
+      "triangles": 13488,
+      "volume_mm3": 8205.123026,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          96.0,
-          15.999999,
-          15.999999
+          95.900002,
+          15.899999,
+          15.899999
         ]
       ],
       "size_mm": [
-        96.0,
-        15.999999,
-        15.999999
+        95.800001,
+        15.799998,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 6,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 4,
       "external_spherical_corners_checked": 8,
       "external_horizontal_arcs_checked": 28,
-      "external_horizontal_section_max_radius_error_mm": 0.0009666130971129894,
-      "external_max_radius_error_mm": 4.452718328273875e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655004228800168,
+      "external_max_radius_error_mm": 4.543610458873637e-06,
       "front_fillet_arcs_checked": 4,
-      "front_fillet_max_radius_error_mm": 3.129172777782685e-06,
+      "front_fillet_max_radius_error_mm": 4.009314154451715e-06,
       "center_axle_holes_checked": 14,
-      "between_cell_axle_holes_checked": 10,
-      "axle_holes_checked": 24,
+      "between_cell_pin_holes_checked": 10,
+      "pin_profile_depth_checks": 70,
+      "pin_profile_max_area_error_mm2": 1.811978657420888e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 4,
+      "middle_inset_max_area_error_mm2": 9.975433192673945e-05,
+      "axle_holes_checked": 14,
       "coplanar_runs_checked": 4,
-      "axle_profile_max_area_error_mm2": 5.371470986184419e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986943755e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1544,41 +2170,58 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 5224,
-      "volume_mm3": 5570.910507,
+      "triangles": 7680,
+      "volume_mm3": 4678.907282,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          48.0,
-          15.999999,
-          15.999999
+          47.899998,
+          15.899999,
+          15.899999
         ]
       ],
       "size_mm": [
-        48.0,
-        15.999999,
-        15.999999
+        47.799997,
+        15.799998,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 3,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 4,
       "external_spherical_corners_checked": 8,
       "external_horizontal_arcs_checked": 16,
-      "external_horizontal_section_max_radius_error_mm": 0.0009651317307858287,
-      "external_max_radius_error_mm": 3.190371509975698e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549784736,
+      "external_max_radius_error_mm": 3.35199281142895e-06,
       "front_fillet_arcs_checked": 4,
-      "front_fillet_max_radius_error_mm": 1.9966254116710047e-06,
+      "front_fillet_max_radius_error_mm": 2.2705229012487393e-06,
       "center_axle_holes_checked": 8,
-      "between_cell_axle_holes_checked": 4,
-      "axle_holes_checked": 12,
+      "between_cell_pin_holes_checked": 4,
+      "pin_profile_depth_checks": 28,
+      "pin_profile_max_area_error_mm2": 1.2660036289774761e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 4,
+      "middle_inset_max_area_error_mm2": 5.397796476662742e-05,
+      "axle_holes_checked": 8,
       "coplanar_runs_checked": 4,
-      "axle_profile_max_area_error_mm2": 5.371473788756803e-06,
+      "axle_profile_max_area_error_mm2": 5.371470986943755e-06,
       "nominal_axle_containment_and_clearance_verified": true
     },
     {
@@ -1587,42 +2230,61 @@
       "winding_consistent": true,
       "connected_components": 1,
       "zero_area_triangles": 0,
-      "triangles": 5624,
-      "volume_mm3": 5744.811846,
+      "triangles": 6976,
+      "volume_mm3": 4929.58692,
       "bounds_mm": [
         [
-          0.0,
-          0.0,
-          0.0
+          0.1,
+          0.1,
+          0.1
         ],
         [
-          32.0,
-          32.0,
-          15.999999
+          31.899998,
+          31.899998,
+          15.899999
         ]
       ],
       "size_mm": [
-        32.0,
-        32.0,
-        15.999999
+        31.799997,
+        31.799997,
+        15.799998
       ],
       "front_and_back_continuous_opening": true,
-      "front_rim_nominal_mm": 3.2,
-      "front_flat_land_mm": 2.4,
+      "front_rim_nominal_mm": 2.3431457505076194,
+      "front_rim_actual_mm": 2.1431457505076192,
+      "assembly_clearance_per_face_mm": 0.1,
+      "nominal_8mm_footprints_checked": 3,
+      "front_flat_land_mm": 1.3431457505076192,
       "external_radius_mm": 0.8,
       "external_vertical_arcs_checked": 5,
       "external_spherical_corners_checked": 10,
       "external_horizontal_arcs_checked": 16,
-      "external_horizontal_section_max_radius_error_mm": 0.0009649423275690516,
-      "external_max_radius_error_mm": 1.9182720986110624e-06,
+      "external_horizontal_section_max_radius_error_mm": 0.0009655275549758091,
+      "external_max_radius_error_mm": 2.698210759377595e-06,
       "front_fillet_arcs_checked": 5,
-      "front_fillet_max_radius_error_mm": 1.9966254116710047e-06,
+      "front_fillet_max_radius_error_mm": 1.5676498312799936e-06,
       "center_axle_holes_checked": 8,
-      "between_cell_axle_holes_checked": 2,
-      "axle_holes_checked": 10,
+      "between_cell_pin_holes_checked": 2,
+      "pin_profile_depth_checks": 14,
+      "pin_profile_max_area_error_mm2": 1.2397277367082791e-05,
+      "middle_wall_mm": 3.8,
+      "middle_wall_nominal_mm": 4,
+      "middle_z_range_mm": [
+        4.1,
+        11.9
+      ],
+      "upper_lower_quarters_use_enlarged_aperture": true,
+      "middle_fill_matches_minimum_wall": true,
+      "middle_cavity_inset_mm": 3.9,
+      "middle_cavity_uses_square_clearance": true,
+      "middle_right_angle_corners_checked": 6,
+      "middle_inset_max_area_error_mm2": 6.179809327453253e-05,
+      "axle_holes_checked": 8,
       "coplanar_runs_checked": 6,
-      "axle_profile_max_area_error_mm2": 5.058855395715916e-06,
+      "axle_profile_max_area_error_mm2": 5.058852592863475e-06,
       "nominal_axle_containment_and_clearance_verified": true
     }
-  ]
+  ],
+  "nominal_8mm_footprint_z_region_checks": 864,
+  "nominal_8mm_footprints_fit_all_cavity_z_regions": true
 }

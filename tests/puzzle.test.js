@@ -42,7 +42,7 @@ test('orientations are unique proper rotations; flat flip is a physical half-tur
   }
 });
 
-for (const directory of ['STL_37', 'web/models']) test(`${directory} STL geometry transforms to exactly the occupied cell bounds`, () => {
+for (const [directory, clearance] of [['STL_37', 0.1], ['web/models', 0]]) test(`${directory} STL geometry preserves its assembly clearance under rotation`, () => {
   const s = shapes[0];
   const bytes = readFileSync(new URL(`../${directory}/${s.name}.stl`, import.meta.url));
   const geometry = new STLLoader().parse(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength));
@@ -52,8 +52,8 @@ for (const directory of ['STL_37', 'web/models']) test(`${directory} STL geometr
     const transformed = geometry.clone().applyMatrix4(new Matrix4().set(...m[0], t[0], ...m[1], t[1], ...m[2], t[2], 0, 0, 0, 1));
     transformed.computeBoundingBox();
     for (const [a, axis] of ['x', 'y', 'z'].entries()) {
-      assert.ok(Math.abs(transformed.boundingBox.min[axis]) < 0.00001);
-      assert.ok(Math.abs(transformed.boundingBox.max[axis] - o.size[a]) < 0.00001);
+      assert.ok(Math.abs(transformed.boundingBox.min[axis] - clearance / CELL_MM) < 0.00001);
+      assert.ok(Math.abs(transformed.boundingBox.max[axis] - o.size[a] + clearance / CELL_MM) < 0.00001);
     }
     transformed.dispose();
   }

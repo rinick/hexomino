@@ -1,0 +1,128 @@
+{
+  "parts": {
+    "A": {
+      "watertight": true,
+      "components": 1,
+      "volume_cm3": 199.15378354583808,
+      "solid_PLA_g_at_1_24": 246.95069159683922,
+      "bounds_mm": [
+        [
+          -4.0,
+          -6.0,
+          0.0
+        ],
+        [
+          196.0,
+          152.0,
+          40.0
+        ]
+      ],
+      "triangles": 420
+    },
+    "B": {
+      "watertight": true,
+      "components": 1,
+      "volume_cm3": 194.6265223977084,
+      "solid_PLA_g_at_1_24": 241.33688777315842,
+      "bounds_mm": [
+        [
+          -4.0,
+          0.09999942779541016,
+          0.0
+        ],
+        [
+          196.0,
+          152.0,
+          40.0
+        ]
+      ],
+      "triangles": 876
+    }
+  },
+  "assemblies": [
+    {
+      "mode": "board",
+      "lift_mm": 0,
+      "section_count": 26,
+      "overlaps": [],
+      "bounds_mm": [
+        [
+          -4.0,
+          -152.0,
+          0.0
+        ],
+        [
+          196.0,
+          152.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "mode": "box",
+      "lift_mm": 0,
+      "section_count": 26,
+      "overlaps": [],
+      "bounds_mm": [
+        [
+          -4.0,
+          -8.0,
+          0.0
+        ],
+        [
+          196.0,
+          152.0,
+          40.0
+        ]
+      ]
+    }
+  ],
+  "total_volume_cm3": 393.7803059435465,
+  "total_solid_PLA_g": 488.2875793699976,
+  "exact_cgal_intersections": {
+    "board": "empty",
+    "box": "zero-volume contact surfaces at Z=20 mm only; wall hard stops"
+  },
+  "packing": {
+    "pieces": 37,
+    "occupied_cells": 216,
+    "dims": [
+      12,
+      9,
+      2
+    ],
+    "layers": [
+      {
+        "z": 0,
+        "pieces": 19,
+        "cells": 108
+      },
+      {
+        "z": 1,
+        "pieces": 18,
+        "cells": 108
+      }
+    ],
+    "all_print_STL_bounds_inside_cavity": true,
+    "occupied_bounds_mm": [
+      [
+        0.10000038146972656,
+        0.10000038146972656,
+        4.100000381469727
+      ],
+      [
+        191.9000015258789,
+        143.89999961853027,
+        35.89999961853027
+      ]
+    ]
+  },
+  "limits": "Geometric checks only. Snap deflection during insertion is intentional; snap force, fatigue, printing fit and loaded carrying strength require physical prototype tests.",
+  "date": "2026-10-23",
+  "sha256": {
+    "hexomino_box_v1.scad": "c99130f20d632b8719bcb7d9b22d2fa41f38be47cf75291e177fc073558b30d0",
+    "STL/Tray_A.stl": "e4599d831924494a7e04ef991bb67db48b31c2526d9e16da34a3bd733d009f36",
+    "STL/Tray_B.stl": "decda8558c627ab58fb09c62bec0534530e16b53e5c77692d9f420ae0f0b75c9",
+    "packing_12x9x2.json": "334be3c64415f3f616b1f22175429007dd5a089d98b89bc38e7bf258c228b9b4"
+  }
+}
